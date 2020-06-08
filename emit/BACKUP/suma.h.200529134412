@@ -1,0 +1,6 @@
+#ifndef sumaguan
+#define sumaguan
+#define uchar unsigned char 
+#define uint  unsigned int
+void disp_smg(uchar value,uchar wei);
+void delay(uint a,uint b,uint c,uint t); 

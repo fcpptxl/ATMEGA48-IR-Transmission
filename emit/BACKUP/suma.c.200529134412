@@ -1,0 +1,33 @@
+#include <iom48v.h>
+#include <macros.h>
+#include "suma.h"
+/*************************************************************
+函数名称: 数码管显示函数。
+功    能: 实现在某位数码管上显示要显示的数值。
+参    数: value--数码管上要显示的值；wei--在哪一位数码管上显示
+返 回 值: 无
+/************************************************************/
+void disp_smg(uchar value,uchar wei)
+{
+  PORTB=value;//给数码管赋值
+  switch(wei)
+    {
+	  case 1:CLR_WEI3;SET_WEI1;break;
+	  case 2:CLR_WEI1;SET_WEI2;break;
+	  case 3:CLR_WEI2;SET_WEI3;break;
+	  default:break;
+	}
+  Delay_ms(2);//延时2ms
+  PORTC|=0X34;//关显示
+}
+void delay(uint a,uint b,uint c,uint t)
+{
+     uint i;
+ 	 for(i=0;i<t;i++)
+	 {
+	 disp_smg(table[a],1);
+	 disp_smg(table[b]+0x80,2); 
+	 disp_smg(table[c],3);
+	 }
+
+}

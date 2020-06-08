@@ -1,0 +1,221 @@
+/*********头文件包含*************/
+#include <iom48v.h>
+#include <macros.h>
+#include "config.h"
+#include "HWFS.h"
+unsigned int ada,k1,tempvalue;
+const char table[10]={0x3f,0x06,0x5B,0X4F,0X66,0X6D,0X7D,0X07,0X7F,0X6F};//0-F数码管码值
+uchar setdata[2];
+/***********宏定义*************/
+#define  uchar unsigned char 
+#define  uint unsigned int
+void Delayus(uint US);
+void port_init(void);
+void Delay_ms (uint ms);
+//void timer1_init(void);
+void init_devices(void);
+void disp_smg(uchar value,uchar wei);
+uint mega48_ad(void);
+void delay(uint a,uint b,uint c,uint t);
+/***************************************************
+宏定义名称：IO端口操作宏定义。
+功      能：实现数码管的位选。
+***************************************************/
+#define SET_WEI1 PORTC&=~BIT(2)   
+#define SET_WEI2 PORTC&=~BIT(4)
+#define SET_WEI3 PORTC&=~BIT(5)
+#define CLR_WEI1 PORTC|=BIT(2)
+#define CLR_WEI2 PORTC|=BIT(4)
+#define CLR_WEI3 PORTC|=BIT(5)
+#define CLR_ALL  PORTC|=0X34
+/*******************************************
+函数名称: Delayus
+功    能: 延时指定微秒（8M晶振）
+参    数: US--延时的微秒数(大约，不是很精确，MS越大越准确)
+返回值  : 无
+/********************************************/
+void Delayus(uint US)		  
+{
+ int i;
+ US=US*5/4;		  	 //5/4是在8MHz晶振下，通过软件仿真反复实验得到的数值
+ for( i=0;i<US;i++); 
+}
+
+/*******************************************
+函数名称: IO口初始化函数
+功    能: 实现IO初始化
+参    数: 无
+返 回 值: 无
+/********************************************/
+void port_init(void)
+{
+ DDRC  = 0x34;  //PC0作为AD的输入
+ PORTC = 0x34;
+ DDRB  = 0xFF;
+ PORTB = 0x00;
+ DDRD=0x02;
+ PORTD=0X00;
+}
+/*******************************************
+函数名称: 软件延时函数
+功    能: 实现软件延时
+参    数: ms--延时的毫秒数
+返 回 值: 无
+/********************************************/
+void Delay_ms (uint ms)
+{
+ 	 unsigned int i,j;
+	 for(i=0;i<ms;i++)
+	 	for(j=0;j<1141;j++);
+}
+/*******************************************
+函数名称: 定时器1初始化函数
+功    能: 分频数1024，定时1秒，误差为0.0%
+参    数: 无
+返 回 值: 无
+/********************************************/
+/*void timer1_init(void)
+{
+ TCCR1B = 0x00; //定时器停止
+ TCNT1H = 0xE1; //setup
+ TCNT1L = 0x7C;
+ OCR1AH = 0x1E;
+ OCR1AL = 0x84;
+ OCR1BH = 0x1E;
+ OCR1BL = 0x84;
+ ICR1H  = 0x1E;
+ ICR1L  = 0x84;
+ TCCR1A = 0x00;
+ TCCR1B = 0x00; //start Timer
+}
+*/
+/*******************************************
+函数名称: 定时器1中断处理函数
+功    能: flag标志位来指示状态
+参    数: 无
+返 回 值: 无
+/********************************************/
+/*#pragma interrupt_handler timer1_ovf_isr:14
+void timer1_ovf_isr(void)
+{
+    if(flag==1)  flag=0;  //flag标志位取反
+ else flag=1;  
+}
+*/
+/*******************************************
+函数名称: 设备初始化函数
+功    能: 对AVR单片机进行初始化
+参    数: 无
+返 回 值: 无
+/********************************************/
+void init_devices(void)
+{
+ //stop errant interrupts until set up
+ CLI(); //disable all interrupts
+ port_init();
+// timer1_init();
+
+ MCUCR = 0x00;
+ EICRA = 0x00; //extended ext ints
+ EIMSK = 0x00;
+ 
+ TIMSK0 = 0x00; //timer 0 interrupt sources
+ TIMSK1 = 0x00; //timer 1 interrupt sources
+ TIMSK2 = 0x00; //timer 2 interrupt sources
+ 
+ PCMSK0 = 0x00; //pin change mask 0 
+ PCMSK1 = 0x00; //pin change mask 1 
+ PCMSK2 = 0x00; //pin change mask 2
+ PCICR = 0x00; //pin change enable 
+ PRR = 0x00; //power controller
+ SEI(); //re-enable interrupts
+ //all peripherals are now initialized
+}
+
+/*************************************************************
+函数名称: 数码管显示函数。
+功    能: 实现在某位数码管上显示要显示的数值。
+参    数: value--数码管上要显示的值；wei--在哪一位数码管上显示
+返 回 值: 无
+/************************************************************/
+void disp_smg(uchar value,uchar wei)
+{
+  PORTB=value;//给数码管赋值
+  switch(wei)
+    {
+	  case 1:CLR_WEI3;SET_WEI1;break;
+	  case 2:CLR_WEI1;SET_WEI2;break;
+	  case 3:CLR_WEI2;SET_WEI3;break;
+	  default:break;
+	}
+  Delay_ms(5);//延时2ms
+  PORTC|=0X34;//关显示
+}
+void delay(uint a,uint b,uint c,uint t)
+{
+     uint i;
+ 	 for(i=0;i<t;i++)
+	 {
+	 disp_smg(table[a],1);
+	 disp_smg(table[b]+0x80,2); 
+	 disp_smg(table[c],3);
+	 }
+
+}
+/*************************************************************
+函数名称: AD采样函数。
+功    能: 实现电压的AD采样。
+参    数: 无
+返 回 值: addata--AD采样的值。1
+/************************************************************/
+uint mega48_ad(void)
+{
+     uint addata;
+	 ADCSRA = 0x00; //disable adc
+	 //PORTA&=~BIT(PA4);
+	 ADMUX=0x00;//选择外部参考电压
+	 //ADMUX=0xC4;//选择内部参考电压
+	 ACSR=0X80;
+	 //ADCSRB = 0x00;
+	 ADCSRA = 0xC7;
+	 while(!(ADCSRA&(BIT(ADIF))));
+     addata=ADCL;
+	 addata=addata+ADCH*256;
+	 //ADCSRA = 0x00;
+	 return addata;
+}   
+
+/********************************************
+函数名称: 主函数
+功    能: 实现函数主体功能。
+参    数: 无
+返 回 值: 无
+********************************************/
+void main(void)
+{
+  uint temp_high,temp_middle,temp_low,tempvalue;
+  init_devices();
+  while(1)
+    {
+		k1=0;
+		k2=0;
+		ada=0;
+      		ada=mega48_ad();  //读出AD的采样值
+			while(ada<(NTCres[k2]))
+			{
+			 	k1=k1+2;
+				k2++;
+				if(k1>410) break;
+				tempvalue=k1;
+				}
+		
+		temp_high=tempvalue/100;//十位
+		temp_middle=tempvalue%100/10;//个位
+		temp_low=tempvalue%10;//小数     x
+
+		delay(temp_high,temp_middle,temp_low,60);
+		delay(temp_high,temp_middle,temp_low,60);
+		}
+	}
+}
+

@@ -1,0 +1,410 @@
+/*********头文件包含*************/
+#include <iom48v.h>
+#include <macros.h>
+unsigned int ada,k1,tempvalue;
+const char table[16]={0x3f,0x06,0x5B,0X4F,0X66,0X6D,0X7D,0X07,0X7F,0X6F};//0-F数码管码值
+unsigned int NTCres[]={
+0x32E	,
+0x32E	,
+0x32D	,
+0x32C	,
+0x32C	,
+0x32B	,
+0x32A	,
+0x32A	,
+0x329	,
+0x328	,
+0x328	,
+0x327	,
+0x326	,
+0x326	,
+0x325	,
+0x324	,
+0x324	,
+0x323	,
+0x322	,
+0x321	,
+0x321	,
+0x320	,
+0x31F	,
+0x31F	,
+0x31E	,
+0x31D	,
+0x31D	,
+0x31C	,
+0x31B	,
+0x31B	,
+0x31A	,
+0x319	,
+0x318	,
+0x318	,
+0x317	,
+0x316	,
+0x316	,
+0x315	,
+0x314	,
+0x314	,
+0x313	,
+0x312	,
+0x312	,
+0x311	,
+0x310	,
+0x30F	,
+0x30F	,
+0x30E	,
+0x30D	,
+0x30D	,
+0x30C	,
+0x30B	,
+0x30B	,
+0x30A	,
+0x309	,
+0x309	,
+0x308	,
+0x307	,
+0x306	,
+0x306	,
+0x305	,
+0x304	,
+0x303	,
+0x302	,
+0x302	,
+0x301	,
+0x300	,
+0x300	,
+0x2FF	,
+0x2FE	,
+0x2FD	,
+0x2FD	,
+0x2FC	,
+0x2FB	,
+0x2FB	,
+0x2FA	,
+0x2F9	,
+0x2F8	,
+0x2F8	,
+0x2F7	,
+0x2F6	,
+0x2F5	,
+0x2F5	,
+0x2F4	,
+0x2F3	,
+0x2F2	,
+0x2F2	,
+0x2F1	,
+0x2F0	,
+0x2F0	,
+0x2EF	,
+0x2EE	,
+0x2ED	,
+0x2EC	,
+0x2EC	,
+0x2EB	,
+0x2EA	,
+0x2E9	,
+0x2E9	,
+0x2E8	,
+0x2E7	,
+0x2E7	,
+0x2E6	,
+0x2E5	,
+0x2E4	,
+0x2E3	,
+0x2E2	,
+0x2E2	,
+0x2E1	,
+0x2E0	,
+0x2E0	,
+0x2DF	,
+0x2DE	,
+0x2DD	,
+0x2DD	,
+0x2DC	,
+0x2DB	,
+0x2DA	,
+0x2D9	,
+0x2D9	,
+0x2D8	,
+0x2D7	,
+0x2D7	,
+0x2D6	,
+0x2D5	,
+0x2D4	,
+0x2D3	,
+0x2D2	,
+0x2D2	,
+0x2D1	,
+0x2D0	,
+0x2D0	,
+0x2CF	,
+0x2CE	,
+0x2CD	,
+0x2CC	,
+0x2CB	,
+0x2CB	,
+0x2CA	,
+0x2C9	,
+0x2C8	,
+0x2C7	,
+0x2C7	,
+0x2C6	,
+0x2C5	,
+0x2C5	,
+0x2C4	,
+0x2C3	,
+0x2C2	,
+0x2C1	,
+0x2C0	,
+0x2C0	,
+0x2BF	,
+0x2BE	,
+0x2BE	,
+0x2BD	,
+0x2BC	,
+0x2BB	,
+0x2BA	,
+0x2B9	,
+0x2B9	,
+0x2B8	,
+0x2B7	,
+0x2B6	,
+0x2B5	,
+0x2B5	,
+0x2B4	,
+0x2B3	,
+0x2B2	,
+0x2B1	,
+0x2B0	,
+0x2B0	,
+0x2AF	,
+0x2AE	,
+0x2AE	,
+0x2AD	,
+0x2AC	,
+0x2AB	,
+0x2AA	,
+0x2A9	,
+0x2A9	,
+0x2A8	,
+0x2A7	,
+0x2A6	,
+0x2A5	,
+0x2A5	,
+0x2A4	,
+0x2A3	,
+0x2A2	,
+0x2A1	,
+0x2A0	,
+0x2A0	,
+0x29F	,
+0x29E	,
+0x29D	,
+0x29C	,
+0x29C	,
+0x29B	,
+0x29A	,
+0x299	,
+0x298	,
+
+};	 //NTC电阻20-40阻值对应adc
+
+/***********宏定义*************/
+#define  uchar unsigned char 
+#define  uint unsigned int
+/***************************************************
+宏定义名称：IO端口操作宏定义。
+功      能：实现数码管的位选。
+***************************************************/
+#define SET_WEI1 PORTC&=~BIT(2)   
+#define SET_WEI2 PORTC&=~BIT(4)
+#define SET_WEI3 PORTC&=~BIT(5)
+#define CLR_WEI1 PORTC|=BIT(2)
+#define CLR_WEI2 PORTC|=BIT(4)
+#define CLR_WEI3 PORTC|=BIT(5)
+#define CLR_ALL  PORTC|=0X34
+
+uchar flag=1;  //定义flag标志，用于标示定时1秒时间到
+
+/*******************************************
+函数名称: IO口初始化函数
+功    能: 实现IO初始化
+参    数: 无
+返 回 值: 无
+/********************************************/
+void port_init(void)
+{
+ DDRC  = 0x34;  //PC0作为AD的输入
+ PORTC = 0x34;
+DDRB  = 0xFF;
+ PORTB = 0x00;
+}
+/*******************************************
+函数名称: 软件延时函数
+功    能: 实现软件延时
+参    数: ms--延时的毫秒数
+返 回 值: 无
+/********************************************/
+void Delay_ms (unsigned int ms)
+{
+ 	 unsigned int i,j;
+	 for(i=0;i<ms;i++)
+	 	for(j=0;j<1141;j++);
+}
+/*******************************************
+函数名称: 定时器1初始化函数
+功    能: 分频数1024，定时1秒，误差为0.0%
+参    数: 无
+返 回 值: 无
+/********************************************/
+void timer1_init(void)
+{
+ TCCR1B = 0x00; //定时器停止
+ TCNT1H = 0xE1; //setup
+ TCNT1L = 0x7C;
+ OCR1AH = 0x1E;
+ OCR1AL = 0x84;
+ OCR1BH = 0x1E;
+ OCR1BL = 0x84;
+ ICR1H  = 0x1E;
+ ICR1L  = 0x84;
+ TCCR1A = 0x00;
+ TCCR1B = 0x05; //start Timer
+}
+
+/*******************************************
+函数名称: 定时器1中断处理函数
+功    能: flag标志位来指示状态
+参    数: 无
+返 回 值: 无
+/********************************************/
+#pragma interrupt_handler timer1_ovf_isr:14
+void timer1_ovf_isr(void)
+{
+
+ TCNT1H = 0xE1; //重新装载定时器1初值的高8位
+ TCNT1L = 0x7C; //重新装载定时器1初值的低8位
+  if(flag==1)  flag=0;  //flag标志位取反
+ else flag=1;  
+ 
+}
+
+/*******************************************
+函数名称: 设备初始化函数
+功    能: 对AVR单片机进行初始化
+参    数: 无
+返 回 值: 无
+/********************************************/
+void init_devices(void)
+{
+ //stop errant interrupts until set up
+ CLI(); //disable all interrupts
+ port_init();
+ timer1_init();
+
+ MCUCR = 0x00;
+ EICRA = 0x00; //extended ext ints
+ EIMSK = 0x00;
+ 
+ TIMSK0 = 0x00; //timer 0 interrupt sources
+ TIMSK1 = 0x01; //timer 1 interrupt sources
+ TIMSK2 = 0x00; //timer 2 interrupt sources
+ 
+ PCMSK0 = 0x00; //pin change mask 0 
+ PCMSK1 = 0x00; //pin change mask 1 
+ PCMSK2 = 0x00; //pin change mask 2
+ PCICR = 0x00; //pin change enable 
+ PRR = 0x00; //power controller
+ SEI(); //re-enable interrupts
+ //all peripherals are now initialized
+}
+
+/*************************************************************
+函数名称: 数码管显示函数。
+功    能: 实现在某位数码管上显示要显示的数值。
+参    数: value--数码管上要显示的值；wei--在哪一位数码管上显示
+返 回 值: 无
+/************************************************************/
+void disp_smg(uchar value,uchar wei)
+{
+  PORTB=value;//给数码管赋值
+  switch(wei)
+    {
+	  case 1:SET_WEI1;CLR_WEI3;break;
+	  case 2:CLR_WEI1;SET_WEI2;break;
+	  case 3:CLR_WEI2;SET_WEI3;break;
+	  default:break;
+	}
+  Delay_ms(2);//延时2ms
+  PORTC|=0X0E;//关显示
+}
+/*************************************************************
+函数名称: AD采样函数。
+功    能: 实现电压的AD采样。
+参    数: 无
+返 回 值: addata--AD采样的值。1
+/************************************************************/
+uint mega48_ad(void)
+{
+     uint addata;
+	 ADCSRA = 0x00; //disable adc
+	 //PORTA&=~BIT(PA4);
+	 ADMUX=0x00;//选择外部参考电压
+	 //ADMUX=0xC4;//选择内部参考电压
+	 ACSR=0X80;
+	 //ADCSRB = 0x00;
+	 ADCSRA = 0xC7;
+	 while(!(ADCSRA&(BIT(ADIF))));
+     addata=ADCL;
+	 addata=addata+ADCH*256;
+	 //ADCSRA = 0x00;
+	 return addata;
+}   
+
+/********************************************
+函数名称: 主函数
+功    能: 实现函数主体功能。
+参    数: 无
+返 回 值: 无
+********************************************/
+void main(void)
+{
+  uint temp_high,temp_middle,temp_low,tempvalue;
+  init_devices();
+  while(1)
+    {
+	  if(flag!=0)
+	  	{	
+		k1=200;
+		ada=0;
+      		ada=mega48_ad();  //读出AD的采样值
+			while(ada<(NTCres[k1-200]))
+			{
+			 	k1++;
+				if(k1>500) break;
+				tempvalue=k1;
+			}
+		}
+
+		
+		temp_high=tempvalue/100;//十位
+		temp_middle=tempvalue%100/10;//个位
+		temp_low=tempvalue%10;//小数
+		if(tempvalue>400||tempvalue<200)
+		{
+			disp_smg(0b01111001,1);   //报错  
+	  		disp_smg(0b01010000,2); 
+	  		disp_smg(0b01010000,3);
+			
+			
+		}		
+		else 
+		{
+		  	if(tempvalue>=100)
+	  			disp_smg(table[temp_high],1);  //在3位数码管上显示AD采样温度    
+	  		disp_smg(table[temp_middle]+0x80,2); //gewei
+	  		disp_smg(table[temp_low],3); //xiaoshu
+			
+	  	}
+	}
+}
+

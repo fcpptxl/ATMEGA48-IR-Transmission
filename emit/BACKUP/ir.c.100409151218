@@ -1,0 +1,169 @@
+/******************************************************
+              忠兴电子元件店编辑
+    器件参数：ATMega48/8/88/168，内部8.0000Mhz		
+	实现功能：数码管动态显示               
+	现象描述：四位数码管显示1234
+	编译环境：ICC-AVR application builder
+	编写日期：08年07月10日
+	使用注意：1、应包含头文件iom48v.h和macros.h
+			  2、忠兴电子元件店ATMEGA48_88_168_ZZX1实验板
+    硬件连接：1、保留主芯片座两边的排针的短路帽
+			  2、将插针HS0038_EN用短路块短路
+			  3、其余无关的短路帽拔掉									   			  
+*******************************************************/
+#include <iom48v.h>
+#include <macros.h>
+
+
+/***********宏定义*************/
+#define  uchar unsigned char 
+#define  uint unsigned int
+
+//将数据保存在程序存储器中，单片机数据存储器很小，可以将不变动的数据放在程序存储器中。
+#pragma data:code                            
+const  table[]={0xc0,0xf9,0xa4,0xb0,0x99,0x92,0x82,0xf8,
+		        0x80,0x90,0x88,0x83,0xc6,0x98,0x86,0x8e};
+#pragma data:data  //设置数据区回到数据存储区
+unsigned char  dat[4],falg1;
+/***************************************************
+宏定义名称：IO端口操作宏定义。
+功      能：实现数码管的位选。
+***************************************************/
+#define SET_WEI1 PORTC|=BIT(1)   
+#define SET_WEI2 PORTC|=BIT(2)
+#define SET_WEI3 PORTC|=BIT(4)
+#define SET_WEI4 PORTC|=BIT(5)
+
+#define CLR_WEI1 PORTC&=~BIT(1)
+#define CLR_WEI2 PORTC&=~BIT(2)
+#define CLR_WEI3 PORTC&=~BIT(4)
+#define CLR_WEI4 PORTC&=~BIT(5)
+#define CLR_ALL  PORTC&=0XC9
+//******************红外引脚************************************                          
+#define hongwai_bit   PD6
+#define hongwai_in    DDRD&=~BIT(hongwai_bit)
+#define hongwai_data  (PIND & BIT(hongwai_bit))
+/*******************************************
+函数名称: IO口初始化程序
+功    能: 实现IO初始化
+参    数: 无
+返 回 值: 无
+/********************************************/
+void port_init(void)
+{
+ PORTC = 0x00;
+ DDRC  = 0x3F;
+ PORTB = 0xFF;
+ DDRB  = 0xFF;
+ DDRD=0xFF;
+ hongwai_in;//设置PD2（INT0）为输入
+ PORTD&=~BIT(hongwai_bit);//带上拉电阻
+}
+
+/*******************************************
+函数名称: 软件延时函数
+功    能: 实现软件延时
+参    数: ms--延时的毫秒数
+返 回 值: 无
+/********************************************/
+void Delay_ms(uint ms)
+{
+   unsigned int i,j;
+   for(i=0;i<ms;i++)
+     for(j=0;j<1141;j++);//1141是在8MHz晶振下，通过软件仿真反复实验得到的数值
+}
+
+/*************************************************************
+函数名称: 数码管显示函数。
+功    能: 实现在某位数码管上显示要显示的数值。
+参    数: value--数码管上要显示的值；wei--在哪一位数码管上显示
+返 回 值: 无
+/************************************************************/
+void disp_smg(uchar value,uchar wei)
+{
+  PORTB=value;//给数码管赋值
+  switch(wei)
+    {
+	  case 1:SET_WEI1;break;
+	  case 2:SET_WEI2;break;
+	  case 3:SET_WEI3;break;
+	  case 4:SET_WEI4;break;
+	  default:break;
+	}
+  Delay_ms(1);//延时2ms
+  CLR_ALL;//关显示
+}
+//*************红外解码程序**************************
+void hongwai()
+{  
+   uchar i,j,n;
+   Delayus(7950);//延时程序必须小于9MS
+   if(hongwai_data==0)//确认IR信号出现
+   {
+     while(!(hongwai_data));//等待IR变为高电平
+     Delayus(2600);//信号变为高电平延时2600微秒后再判断，如果为低电平则认是连发码
+	 if(hongwai_data)
+     {
+       for(i=0;i<4;i++)
+       {
+         dat[i]=0;
+       }
+	   while(hongwai_data);
+       for(i=0;i<=3;i++) 
+       {  
+         for(j=0;j<8;j++)
+         {
+           while (hongwai_data==0 ); //等 IR 变为高电平
+           while (hongwai_data)       //计算IR高电平时长
+           { 
+             Delayus(72);
+             n++;           
+             if (n>=30){goto goout_int0;}
+           }  
+           dat[i]=dat[i] >> 1;
+           if (n>=11) {dat[i] = dat[i]|0x80;}
+           n=0;
+         }
+       }
+     } 
+   }
+   goout_int0:
+   if (dat[2]!=(~dat[3])) {dat[2]=0;}//此句刚开始可以屏蔽,见到效果后再尝试打开校验
+}  
+/*******************************************
+函数名称: Delayus
+功    能: 延时指定微秒（8M晶振）
+参    数: US--延时的微秒数(大约，不是很精确，MS越大越准确)
+返回值  : 无
+/********************************************/
+void Delayus(uint US)		  
+{
+ uint i;
+ US=US*5/4;		  	 //5/4是在8MHz晶振下，通过软件仿真反复实验得到的数值
+ for( i=0;i<US;i++); 
+}
+/********************************************
+函数名称: 主函数
+功    能: 实现函数主体功能。
+参    数: 无
+返 回 值: 无
+********************************************/
+void main(void)
+{ uchar dis1,dis2,dis3;
+  port_init();//端口初始化
+  while(1)
+    {
+	  while(hongwai_data==0)hongwai();
+	  dis1=dat[2]/100%10;//计算红外用户码的百位数据
+      dis2=dat[2]/10%10;//计算红外用户码的十位数据
+      dis3=dat[2]%10;//计算红外用户码的个位数据
+	  disp_smg(table[dis1],1);
+	  while(hongwai_data==0)hongwai();
+	  disp_smg(table[dis2],2);
+	  while(hongwai_data==0)hongwai(); 
+	  disp_smg(table[dis3],3);
+	}
+  
+	
+}
+

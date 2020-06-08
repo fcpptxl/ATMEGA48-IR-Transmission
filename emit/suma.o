@@ -1,0 +1,88 @@
+XL
+H 3 areas 8 global symbols
+M suma.c
+S push_xgset303C Ref0000
+S push_xgsetF0FC Ref0000
+S _Delay_ms Ref0000
+S pop_xgset303C Ref0000
+S pop_xgsetF0FC Ref0000
+A text size 96 flags 0
+dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\suma.c
+dbfunc e disp_smg 0 fV
+dbsym r wei A c
+dbsym r value C c
+dbline FFFFFFFF 6
+dbline C 6
+dbline D 6
+dbline E 8
+dbline 10 26
+dbline 10 28
+dbline 10 2A
+dbline 11 2C
+dbline 11 2E
+dbline 11 30
+dbline 12 32
+dbline 12 34
+dbline 12 36
+dbline 13 36
+dbline 15 36
+dbline 16 3C
+dbline FFFFFFFE 42
+dbline 0 42
+dbfunc e delay 44 fV
+dbsym r i 14 i
+dbsym r t A i
+dbsym r c C i
+dbsym r b E i
+dbsym r a 16 i
+dbline FFFFFFFF 52
+dbline 19 52
+dbline 1B 52
+dbline 1C 58
+dbline 1D 58
+dbline 1E 68
+dbline 1F 7A
+dbline 20 8A
+dbline 1B 8A
+dbline 1B 8E
+dbline FFFFFFFE 94
+dbline 0 94
+S _delay Def0044
+S _disp_smg Def0000
+A data size A flags 20
+dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\suma.c
+dbsym e table 0 A[10:10]c
+S _table Def0000
+A idata size A flags 0
+T 00 00 3F 06
+R 00 00 02 00
+T 02 00 5B 4F
+R 00 00 02 00
+T 04 00 66 6D
+R 00 00 02 00
+T 06 00 7D 07
+R 00 00 02 00
+T 08 00 7F 6F
+R 00 00 02 00
+T 00 00 00 D0 A2 2E C0 2E CB B8 4A 2D 55 27 41 30
+R 00 00 00 00 82 02 00 00
+T 0E 00 E0 E0 5E 07 49 F0 42 30 E0 E0 5E 07 41 F0
+R 00 00 00 00
+T 1C 00 43 30 E0 E0 5E 07 39 F0 08 C0 41 98 43 9A
+R 00 00 00 00
+T 2A 00 05 C0 41 9A 42 98 02 C0 42 9A 43 98 02 E0
+R 00 00 00 00
+T 38 00 10 E0 00 D0 88 B1 8E 60 88 B9 00 C0
+R 00 00 00 00 82 04 02 00 82 0C 03 00
+T 44 00 00 D0 79 01 B8 01 CA 84 DB 84 AC 84 BD 84
+R 00 00 00 00 82 02 01 00
+T 52 00 44 27 55 27 1B C0 23 E0 80 E0 90 E0 FB 01
+R 00 00 00 00 20 0A 01 00 00 00 40 0C 01 00 00 00
+T 60 00 E8 0F F9 1F 00 81 CC DF 22 E0 80 E0 90 E0
+R 00 00 00 00 20 0C 01 00 00 00 40 0E 01 00 00 00
+T 6E 00 F7 01 E8 0F F9 1F 00 81 00 58 C3 DF 21 E0
+R 00 00 00 00
+T 7C 00 80 E0 90 E0 F6 01 E8 0F F9 1F 00 81 BB DF
+R 00 00 00 00 20 02 01 00 00 00 40 04 01 00 00 00
+T 8A 00 4F 5F 5F 4F 4A 15 5B 05 10 F3 00 C0
+R 00 00 00 00 82 0C 04 00

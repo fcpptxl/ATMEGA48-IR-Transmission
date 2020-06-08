@@ -1,0 +1,1502 @@
+                        .module ir.c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+                        .area data(ram, con, rel)
+ 0000                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0000           _NTCres::
+ 0000                   .blkb 2
+                        .area idata
+ 0000 9A03              .word 922
+                        .area data(ram, con, rel)
+ 0002                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0002                   .blkb 2
+                        .area idata
+ 0002 9A03              .word 922
+                        .area data(ram, con, rel)
+ 0004                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0004                   .blkb 2
+                        .area idata
+ 0004 9903              .word 921
+                        .area data(ram, con, rel)
+ 0006                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0006                   .blkb 2
+                        .area idata
+ 0006 9803              .word 920
+                        .area data(ram, con, rel)
+ 0008                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0008                   .blkb 2
+                        .area idata
+ 0008 9703              .word 919
+                        .area data(ram, con, rel)
+ 000A                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 000A                   .blkb 2
+                        .area idata
+ 000A 9603              .word 918
+                        .area data(ram, con, rel)
+ 000C                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 000C                   .blkb 2
+                        .area idata
+ 000C 9503              .word 917
+                        .area data(ram, con, rel)
+ 000E                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 000E                   .blkb 2
+                        .area idata
+ 000E 9403              .word 916
+                        .area data(ram, con, rel)
+ 0010                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0010                   .blkb 2
+                        .area idata
+ 0010 9303              .word 915
+                        .area data(ram, con, rel)
+ 0012                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0012                   .blkb 2
+                        .area idata
+ 0012 9303              .word 915
+                        .area data(ram, con, rel)
+ 0014                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0014                   .blkb 2
+                        .area idata
+ 0014 9203              .word 914
+                        .area data(ram, con, rel)
+ 0016                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0016                   .blkb 2
+                        .area idata
+ 0016 9103              .word 913
+                        .area data(ram, con, rel)
+ 0018                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0018                   .blkb 2
+                        .area idata
+ 0018 9003              .word 912
+                        .area data(ram, con, rel)
+ 001A                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 001A                   .blkb 2
+                        .area idata
+ 001A 8F03              .word 911
+                        .area data(ram, con, rel)
+ 001C                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 001C                   .blkb 2
+                        .area idata
+ 001C 8E03              .word 910
+                        .area data(ram, con, rel)
+ 001E                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 001E                   .blkb 2
+                        .area idata
+ 001E 8D03              .word 909
+                        .area data(ram, con, rel)
+ 0020                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0020                   .blkb 2
+                        .area idata
+ 0020 8C03              .word 908
+                        .area data(ram, con, rel)
+ 0022                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0022                   .blkb 2
+                        .area idata
+ 0022 8C03              .word 908
+                        .area data(ram, con, rel)
+ 0024                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0024                   .blkb 2
+                        .area idata
+ 0024 8A03              .word 906
+                        .area data(ram, con, rel)
+ 0026                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0026                   .blkb 2
+                        .area idata
+ 0026 8A03              .word 906
+                        .area data(ram, con, rel)
+ 0028                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0028                   .blkb 2
+                        .area idata
+ 0028 8903              .word 905
+                        .area data(ram, con, rel)
+ 002A                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 002A                   .blkb 2
+                        .area idata
+ 002A 8803              .word 904
+                        .area data(ram, con, rel)
+ 002C                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 002C                   .blkb 2
+                        .area idata
+ 002C 8703              .word 903
+                        .area data(ram, con, rel)
+ 002E                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 002E                   .blkb 2
+                        .area idata
+ 002E 8603              .word 902
+                        .area data(ram, con, rel)
+ 0030                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0030                   .blkb 2
+                        .area idata
+ 0030 8503              .word 901
+                        .area data(ram, con, rel)
+ 0032                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0032                   .blkb 2
+                        .area idata
+ 0032 8403              .word 900
+                        .area data(ram, con, rel)
+ 0034                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0034                   .blkb 2
+                        .area idata
+ 0034 8303              .word 899
+                        .area data(ram, con, rel)
+ 0036                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0036                   .blkb 2
+                        .area idata
+ 0036 8203              .word 898
+                        .area data(ram, con, rel)
+ 0038                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0038                   .blkb 2
+                        .area idata
+ 0038 8103              .word 897
+                        .area data(ram, con, rel)
+ 003A                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 003A                   .blkb 2
+                        .area idata
+ 003A 8003              .word 896
+                        .area data(ram, con, rel)
+ 003C                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 003C                   .blkb 2
+                        .area idata
+ 003C 7F03              .word 895
+                        .area data(ram, con, rel)
+ 003E                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 003E                   .blkb 2
+                        .area idata
+ 003E 7E03              .word 894
+                        .area data(ram, con, rel)
+ 0040                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0040                   .blkb 2
+                        .area idata
+ 0040 7D03              .word 893
+                        .area data(ram, con, rel)
+ 0042                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0042                   .blkb 2
+                        .area idata
+ 0042 7C03              .word 892
+                        .area data(ram, con, rel)
+ 0044                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0044                   .blkb 2
+                        .area idata
+ 0044 7B03              .word 891
+                        .area data(ram, con, rel)
+ 0046                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0046                   .blkb 2
+                        .area idata
+ 0046 7A03              .word 890
+                        .area data(ram, con, rel)
+ 0048                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0048                   .blkb 2
+                        .area idata
+ 0048 7903              .word 889
+                        .area data(ram, con, rel)
+ 004A                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 004A                   .blkb 2
+                        .area idata
+ 004A 7803              .word 888
+                        .area data(ram, con, rel)
+ 004C                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 004C                   .blkb 2
+                        .area idata
+ 004C 7703              .word 887
+                        .area data(ram, con, rel)
+ 004E                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 004E                   .blkb 2
+                        .area idata
+ 004E 7603              .word 886
+                        .area data(ram, con, rel)
+ 0050                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0050                   .blkb 2
+                        .area idata
+ 0050 7503              .word 885
+                        .area data(ram, con, rel)
+ 0052                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0052                   .blkb 2
+                        .area idata
+ 0052 7403              .word 884
+                        .area data(ram, con, rel)
+ 0054                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0054                   .blkb 2
+                        .area idata
+ 0054 7303              .word 883
+                        .area data(ram, con, rel)
+ 0056                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0056                   .blkb 2
+                        .area idata
+ 0056 7203              .word 882
+                        .area data(ram, con, rel)
+ 0058                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0058                   .blkb 2
+                        .area idata
+ 0058 7103              .word 881
+                        .area data(ram, con, rel)
+ 005A                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 005A                   .blkb 2
+                        .area idata
+ 005A 7003              .word 880
+                        .area data(ram, con, rel)
+ 005C                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 005C                   .blkb 2
+                        .area idata
+ 005C 6F03              .word 879
+                        .area data(ram, con, rel)
+ 005E                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 005E                   .blkb 2
+                        .area idata
+ 005E 6E03              .word 878
+                        .area data(ram, con, rel)
+ 0060                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0060                   .blkb 2
+                        .area idata
+ 0060 6C03              .word 876
+                        .area data(ram, con, rel)
+ 0062                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0062                   .blkb 2
+                        .area idata
+ 0062 6C03              .word 876
+                        .area data(ram, con, rel)
+ 0064                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0064                   .blkb 2
+                        .area idata
+ 0064 6A03              .word 874
+                        .area data(ram, con, rel)
+ 0066                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0066                   .blkb 2
+                        .area idata
+ 0066 6903              .word 873
+                        .area data(ram, con, rel)
+ 0068                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0068                   .blkb 2
+                        .area idata
+ 0068 6803              .word 872
+                        .area data(ram, con, rel)
+ 006A                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 006A                   .blkb 2
+                        .area idata
+ 006A 6703              .word 871
+                        .area data(ram, con, rel)
+ 006C                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 006C                   .blkb 2
+                        .area idata
+ 006C 6603              .word 870
+                        .area data(ram, con, rel)
+ 006E                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 006E                   .blkb 2
+                        .area idata
+ 006E 6503              .word 869
+                        .area data(ram, con, rel)
+ 0070                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0070                   .blkb 2
+                        .area idata
+ 0070 6403              .word 868
+                        .area data(ram, con, rel)
+ 0072                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0072                   .blkb 2
+                        .area idata
+ 0072 6303              .word 867
+                        .area data(ram, con, rel)
+ 0074                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0074                   .blkb 2
+                        .area idata
+ 0074 6203              .word 866
+                        .area data(ram, con, rel)
+ 0076                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0076                   .blkb 2
+                        .area idata
+ 0076 6103              .word 865
+                        .area data(ram, con, rel)
+ 0078                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0078                   .blkb 2
+                        .area idata
+ 0078 5F03              .word 863
+                        .area data(ram, con, rel)
+ 007A                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 007A                   .blkb 2
+                        .area idata
+ 007A 5E03              .word 862
+                        .area data(ram, con, rel)
+ 007C                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 007C                   .blkb 2
+                        .area idata
+ 007C 5D03              .word 861
+                        .area data(ram, con, rel)
+ 007E                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 007E                   .blkb 2
+                        .area idata
+ 007E 5C03              .word 860
+                        .area data(ram, con, rel)
+ 0080                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0080                   .blkb 2
+                        .area idata
+ 0080 5B03              .word 859
+                        .area data(ram, con, rel)
+ 0082                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0082                   .blkb 2
+                        .area idata
+ 0082 5A03              .word 858
+                        .area data(ram, con, rel)
+ 0084                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0084                   .blkb 2
+                        .area idata
+ 0084 5803              .word 856
+                        .area data(ram, con, rel)
+ 0086                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0086                   .blkb 2
+                        .area idata
+ 0086 5703              .word 855
+                        .area data(ram, con, rel)
+ 0088                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0088                   .blkb 2
+                        .area idata
+ 0088 5603              .word 854
+                        .area data(ram, con, rel)
+ 008A                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 008A                   .blkb 2
+                        .area idata
+ 008A 5503              .word 853
+                        .area data(ram, con, rel)
+ 008C                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 008C                   .blkb 2
+                        .area idata
+ 008C 5403              .word 852
+                        .area data(ram, con, rel)
+ 008E                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 008E                   .blkb 2
+                        .area idata
+ 008E 5303              .word 851
+                        .area data(ram, con, rel)
+ 0090                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0090                   .blkb 2
+                        .area idata
+ 0090 5103              .word 849
+                        .area data(ram, con, rel)
+ 0092                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0092                   .blkb 2
+                        .area idata
+ 0092 5003              .word 848
+                        .area data(ram, con, rel)
+ 0094                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0094                   .blkb 2
+                        .area idata
+ 0094 4F03              .word 847
+                        .area data(ram, con, rel)
+ 0096                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0096                   .blkb 2
+                        .area idata
+ 0096 4E03              .word 846
+                        .area data(ram, con, rel)
+ 0098                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0098                   .blkb 2
+                        .area idata
+ 0098 4D03              .word 845
+                        .area data(ram, con, rel)
+ 009A                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 009A                   .blkb 2
+                        .area idata
+ 009A 4B03              .word 843
+                        .area data(ram, con, rel)
+ 009C                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 009C                   .blkb 2
+                        .area idata
+ 009C 4A03              .word 842
+                        .area data(ram, con, rel)
+ 009E                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 009E                   .blkb 2
+                        .area idata
+ 009E 4903              .word 841
+                        .area data(ram, con, rel)
+ 00A0                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00A0                   .blkb 2
+                        .area idata
+ 00A0 4803              .word 840
+                        .area data(ram, con, rel)
+ 00A2                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00A2                   .blkb 2
+                        .area idata
+ 00A2 4603              .word 838
+                        .area data(ram, con, rel)
+ 00A4                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00A4                   .blkb 2
+                        .area idata
+ 00A4 4503              .word 837
+                        .area data(ram, con, rel)
+ 00A6                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00A6                   .blkb 2
+                        .area idata
+ 00A6 4403              .word 836
+                        .area data(ram, con, rel)
+ 00A8                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00A8                   .blkb 2
+                        .area idata
+ 00A8 4303              .word 835
+                        .area data(ram, con, rel)
+ 00AA                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00AA                   .blkb 2
+                        .area idata
+ 00AA 4103              .word 833
+                        .area data(ram, con, rel)
+ 00AC                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00AC                   .blkb 2
+                        .area idata
+ 00AC 4003              .word 832
+                        .area data(ram, con, rel)
+ 00AE                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00AE                   .blkb 2
+                        .area idata
+ 00AE 3F03              .word 831
+                        .area data(ram, con, rel)
+ 00B0                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00B0                   .blkb 2
+                        .area idata
+ 00B0 3E03              .word 830
+                        .area data(ram, con, rel)
+ 00B2                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00B2                   .blkb 2
+                        .area idata
+ 00B2 3D03              .word 829
+                        .area data(ram, con, rel)
+ 00B4                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00B4                   .blkb 2
+                        .area idata
+ 00B4 3B03              .word 827
+                        .area data(ram, con, rel)
+ 00B6                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00B6                   .blkb 2
+                        .area idata
+ 00B6 3A03              .word 826
+                        .area data(ram, con, rel)
+ 00B8                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00B8                   .blkb 2
+                        .area idata
+ 00B8 3903              .word 825
+                        .area data(ram, con, rel)
+ 00BA                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00BA                   .blkb 2
+                        .area idata
+ 00BA 3703              .word 823
+                        .area data(ram, con, rel)
+ 00BC                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00BC                   .blkb 2
+                        .area idata
+ 00BC 3603              .word 822
+                        .area data(ram, con, rel)
+ 00BE                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00BE                   .blkb 2
+                        .area idata
+ 00BE 3503              .word 821
+                        .area data(ram, con, rel)
+ 00C0                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00C0                   .blkb 2
+                        .area idata
+ 00C0 3403              .word 820
+                        .area data(ram, con, rel)
+ 00C2                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00C2                   .blkb 2
+                        .area idata
+ 00C2 3203              .word 818
+                        .area data(ram, con, rel)
+ 00C4                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00C4                   .blkb 2
+                        .area idata
+ 00C4 3103              .word 817
+                        .area data(ram, con, rel)
+ 00C6                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00C6                   .blkb 2
+                        .area idata
+ 00C6 2F03              .word 815
+                        .area data(ram, con, rel)
+ 00C8                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00C8                   .blkb 2
+                        .area idata
+ 00C8 2E03              .word 814
+                        .area data(ram, con, rel)
+ 00CA                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00CA                   .blkb 2
+                        .area idata
+ 00CA 2D03              .word 813
+                        .area data(ram, con, rel)
+ 00CC                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00CC                   .blkb 2
+                        .area idata
+ 00CC 2C03              .word 812
+                        .area data(ram, con, rel)
+ 00CE                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00CE                   .blkb 2
+                        .area idata
+ 00CE 2A03              .word 810
+                        .area data(ram, con, rel)
+ 00D0                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00D0                   .blkb 2
+                        .area idata
+ 00D0 2903              .word 809
+                        .area data(ram, con, rel)
+ 00D2                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00D2                   .blkb 2
+                        .area idata
+ 00D2 2803              .word 808
+                        .area data(ram, con, rel)
+ 00D4                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00D4                   .blkb 2
+                        .area idata
+ 00D4 2603              .word 806
+                        .area data(ram, con, rel)
+ 00D6                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00D6                   .blkb 2
+                        .area idata
+ 00D6 2503              .word 805
+                        .area data(ram, con, rel)
+ 00D8                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00D8                   .blkb 2
+                        .area idata
+ 00D8 2403              .word 804
+                        .area data(ram, con, rel)
+ 00DA                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00DA                   .blkb 2
+                        .area idata
+ 00DA 2203              .word 802
+                        .area data(ram, con, rel)
+ 00DC                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00DC                   .blkb 2
+                        .area idata
+ 00DC 2103              .word 801
+                        .area data(ram, con, rel)
+ 00DE                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00DE                   .blkb 2
+                        .area idata
+ 00DE 1F03              .word 799
+                        .area data(ram, con, rel)
+ 00E0                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00E0                   .blkb 2
+                        .area idata
+ 00E0 1E03              .word 798
+                        .area data(ram, con, rel)
+ 00E2                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00E2                   .blkb 2
+                        .area idata
+ 00E2 1D03              .word 797
+                        .area data(ram, con, rel)
+ 00E4                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00E4                   .blkb 2
+                        .area idata
+ 00E4 1B03              .word 795
+                        .area data(ram, con, rel)
+ 00E6                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00E6                   .blkb 2
+                        .area idata
+ 00E6 1A03              .word 794
+                        .area data(ram, con, rel)
+ 00E8                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00E8                   .blkb 2
+                        .area idata
+ 00E8 1803              .word 792
+                        .area data(ram, con, rel)
+ 00EA                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00EA                   .blkb 2
+                        .area idata
+ 00EA 1703              .word 791
+                        .area data(ram, con, rel)
+ 00EC                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00EC                   .blkb 2
+                        .area idata
+ 00EC 1603              .word 790
+                        .area data(ram, con, rel)
+ 00EE                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00EE                   .blkb 2
+                        .area idata
+ 00EE 1403              .word 788
+                        .area data(ram, con, rel)
+ 00F0                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00F0                   .blkb 2
+                        .area idata
+ 00F0 1303              .word 787
+                        .area data(ram, con, rel)
+ 00F2                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00F2                   .blkb 2
+                        .area idata
+ 00F2 1203              .word 786
+                        .area data(ram, con, rel)
+ 00F4                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00F4                   .blkb 2
+                        .area idata
+ 00F4 1003              .word 784
+                        .area data(ram, con, rel)
+ 00F6                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00F6                   .blkb 2
+                        .area idata
+ 00F6 0F03              .word 783
+                        .area data(ram, con, rel)
+ 00F8                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00F8                   .blkb 2
+                        .area idata
+ 00F8 0D03              .word 781
+                        .area data(ram, con, rel)
+ 00FA                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00FA                   .blkb 2
+                        .area idata
+ 00FA 0C03              .word 780
+                        .area data(ram, con, rel)
+ 00FC                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00FC                   .blkb 2
+                        .area idata
+ 00FC 0B03              .word 779
+                        .area data(ram, con, rel)
+ 00FE                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 00FE                   .blkb 2
+                        .area idata
+ 00FE 0903              .word 777
+                        .area data(ram, con, rel)
+ 0100                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0100                   .blkb 2
+                        .area idata
+ 0100 0803              .word 776
+                        .area data(ram, con, rel)
+ 0102                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0102                   .blkb 2
+                        .area idata
+ 0102 0603              .word 774
+                        .area data(ram, con, rel)
+ 0104                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0104                   .blkb 2
+                        .area idata
+ 0104 0503              .word 773
+                        .area data(ram, con, rel)
+ 0106                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0106                   .blkb 2
+                        .area idata
+ 0106 0303              .word 771
+                        .area data(ram, con, rel)
+ 0108                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0108                   .blkb 2
+                        .area idata
+ 0108 0203              .word 770
+                        .area data(ram, con, rel)
+ 010A                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 010A                   .blkb 2
+                        .area idata
+ 010A 0003              .word 768
+                        .area data(ram, con, rel)
+ 010C                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 010C                   .blkb 2
+                        .area idata
+ 010C FF02              .word 767
+                        .area data(ram, con, rel)
+ 010E                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 010E                   .blkb 2
+                        .area idata
+ 010E FD02              .word 765
+                        .area data(ram, con, rel)
+ 0110                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0110                   .blkb 2
+                        .area idata
+ 0110 FC02              .word 764
+                        .area data(ram, con, rel)
+ 0112                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0112                   .blkb 2
+                        .area idata
+ 0112 FB02              .word 763
+                        .area data(ram, con, rel)
+ 0114                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0114                   .blkb 2
+                        .area idata
+ 0114 F902              .word 761
+                        .area data(ram, con, rel)
+ 0116                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0116                   .blkb 2
+                        .area idata
+ 0116 F802              .word 760
+                        .area data(ram, con, rel)
+ 0118                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0118                   .blkb 2
+                        .area idata
+ 0118 F602              .word 758
+                        .area data(ram, con, rel)
+ 011A                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 011A                   .blkb 2
+                        .area idata
+ 011A F502              .word 757
+                        .area data(ram, con, rel)
+ 011C                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 011C                   .blkb 2
+                        .area idata
+ 011C F302              .word 755
+                        .area data(ram, con, rel)
+ 011E                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 011E                   .blkb 2
+                        .area idata
+ 011E F202              .word 754
+                        .area data(ram, con, rel)
+ 0120                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0120                   .blkb 2
+                        .area idata
+ 0120 F002              .word 752
+                        .area data(ram, con, rel)
+ 0122                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0122                   .blkb 2
+                        .area idata
+ 0122 EF02              .word 751
+                        .area data(ram, con, rel)
+ 0124                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0124                   .blkb 2
+                        .area idata
+ 0124 ED02              .word 749
+                        .area data(ram, con, rel)
+ 0126                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0126                   .blkb 2
+                        .area idata
+ 0126 EC02              .word 748
+                        .area data(ram, con, rel)
+ 0128                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0128                   .blkb 2
+                        .area idata
+ 0128 EA02              .word 746
+                        .area data(ram, con, rel)
+ 012A                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 012A                   .blkb 2
+                        .area idata
+ 012A E902              .word 745
+                        .area data(ram, con, rel)
+ 012C                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 012C                   .blkb 2
+                        .area idata
+ 012C E702              .word 743
+                        .area data(ram, con, rel)
+ 012E                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 012E                   .blkb 2
+                        .area idata
+ 012E E602              .word 742
+                        .area data(ram, con, rel)
+ 0130                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0130                   .blkb 2
+                        .area idata
+ 0130 E402              .word 740
+                        .area data(ram, con, rel)
+ 0132                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0132                   .blkb 2
+                        .area idata
+ 0132 E202              .word 738
+                        .area data(ram, con, rel)
+ 0134                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0134                   .blkb 2
+                        .area idata
+ 0134 E102              .word 737
+                        .area data(ram, con, rel)
+ 0136                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0136                   .blkb 2
+                        .area idata
+ 0136 E002              .word 736
+                        .area data(ram, con, rel)
+ 0138                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0138                   .blkb 2
+                        .area idata
+ 0138 DE02              .word 734
+                        .area data(ram, con, rel)
+ 013A                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 013A                   .blkb 2
+                        .area idata
+ 013A DD02              .word 733
+                        .area data(ram, con, rel)
+ 013C                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 013C                   .blkb 2
+                        .area idata
+ 013C DB02              .word 731
+                        .area data(ram, con, rel)
+ 013E                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 013E                   .blkb 2
+                        .area idata
+ 013E D902              .word 729
+                        .area data(ram, con, rel)
+ 0140                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0140                   .blkb 2
+                        .area idata
+ 0140 D802              .word 728
+                        .area data(ram, con, rel)
+ 0142                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0142                   .blkb 2
+                        .area idata
+ 0142 D702              .word 727
+                        .area data(ram, con, rel)
+ 0144                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0144                   .blkb 2
+                        .area idata
+ 0144 D502              .word 725
+                        .area data(ram, con, rel)
+ 0146                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0146                   .blkb 2
+                        .area idata
+ 0146 D302              .word 723
+                        .area data(ram, con, rel)
+ 0148                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0148                   .blkb 2
+                        .area idata
+ 0148 D202              .word 722
+                        .area data(ram, con, rel)
+ 014A                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 014A                   .blkb 2
+                        .area idata
+ 014A D002              .word 720
+                        .area data(ram, con, rel)
+ 014C                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 014C                   .blkb 2
+                        .area idata
+ 014C CF02              .word 719
+                        .area data(ram, con, rel)
+ 014E                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 014E                   .blkb 2
+                        .area idata
+ 014E CD02              .word 717
+                        .area data(ram, con, rel)
+ 0150                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0150                   .blkb 2
+                        .area idata
+ 0150 CB02              .word 715
+                        .area data(ram, con, rel)
+ 0152                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0152                   .blkb 2
+                        .area idata
+ 0152 CA02              .word 714
+                        .area data(ram, con, rel)
+ 0154                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0154                   .blkb 2
+                        .area idata
+ 0154 C802              .word 712
+                        .area data(ram, con, rel)
+ 0156                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0156                   .blkb 2
+                        .area idata
+ 0156 C702              .word 711
+                        .area data(ram, con, rel)
+ 0158                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0158                   .blkb 2
+                        .area idata
+ 0158 C502              .word 709
+                        .area data(ram, con, rel)
+ 015A                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 015A                   .blkb 2
+                        .area idata
+ 015A C402              .word 708
+                        .area data(ram, con, rel)
+ 015C                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 015C                   .blkb 2
+                        .area idata
+ 015C C202              .word 706
+                        .area data(ram, con, rel)
+ 015E                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 015E                   .blkb 2
+                        .area idata
+ 015E C002              .word 704
+                        .area data(ram, con, rel)
+ 0160                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0160                   .blkb 2
+                        .area idata
+ 0160 BF02              .word 703
+                        .area data(ram, con, rel)
+ 0162                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0162                   .blkb 2
+                        .area idata
+ 0162 BE02              .word 702
+                        .area data(ram, con, rel)
+ 0164                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0164                   .blkb 2
+                        .area idata
+ 0164 BC02              .word 700
+                        .area data(ram, con, rel)
+ 0166                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0166                   .blkb 2
+                        .area idata
+ 0166 BA02              .word 698
+                        .area data(ram, con, rel)
+ 0168                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0168                   .blkb 2
+                        .area idata
+ 0168 B902              .word 697
+                        .area data(ram, con, rel)
+ 016A                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 016A                   .blkb 2
+                        .area idata
+ 016A B702              .word 695
+                        .area data(ram, con, rel)
+ 016C                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 016C                   .blkb 2
+                        .area idata
+ 016C B502              .word 693
+                        .area data(ram, con, rel)
+ 016E                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 016E                   .blkb 2
+                        .area idata
+ 016E B402              .word 692
+                        .area data(ram, con, rel)
+ 0170                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0170                   .blkb 2
+                        .area idata
+ 0170 B202              .word 690
+                        .area data(ram, con, rel)
+ 0172                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0172                   .blkb 2
+                        .area idata
+ 0172 B002              .word 688
+                        .area data(ram, con, rel)
+ 0174                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0174                   .blkb 2
+                        .area idata
+ 0174 AF02              .word 687
+                        .area data(ram, con, rel)
+ 0176                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0176                   .blkb 2
+                        .area idata
+ 0176 AE02              .word 686
+                        .area data(ram, con, rel)
+ 0178                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0178                   .blkb 2
+                        .area idata
+ 0178 AC02              .word 684
+                        .area data(ram, con, rel)
+ 017A                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 017A                   .blkb 2
+                        .area idata
+ 017A AA02              .word 682
+                        .area data(ram, con, rel)
+ 017C                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 017C                   .blkb 2
+                        .area idata
+ 017C A902              .word 681
+                        .area data(ram, con, rel)
+ 017E                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 017E                   .blkb 2
+                        .area idata
+ 017E A702              .word 679
+                        .area data(ram, con, rel)
+ 0180                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0180                   .blkb 2
+                        .area idata
+ 0180 A502              .word 677
+                        .area data(ram, con, rel)
+ 0182                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0182                   .blkb 2
+                        .area idata
+ 0182 A402              .word 676
+                        .area data(ram, con, rel)
+ 0184                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0184                   .blkb 2
+                        .area idata
+ 0184 A202              .word 674
+                        .area data(ram, con, rel)
+ 0186                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0186                   .blkb 2
+                        .area idata
+ 0186 A002              .word 672
+                        .area data(ram, con, rel)
+ 0188                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0188                   .blkb 2
+                        .area idata
+ 0188 9F02              .word 671
+                        .area data(ram, con, rel)
+ 018A                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 018A                   .blkb 2
+                        .area idata
+ 018A 9D02              .word 669
+                        .area data(ram, con, rel)
+ 018C                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 018C                   .blkb 2
+                        .area idata
+ 018C 9C02              .word 668
+                        .area data(ram, con, rel)
+ 018E                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 018E                   .blkb 2
+                        .area idata
+ 018E 9A02              .word 666
+                        .area data(ram, con, rel)
+ 0190                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0190                   .blkb 2
+                        .area idata
+ 0190 9802              .word 664
+                        .area data(ram, con, rel)
+ 0192                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0192                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\config.h
+ 0192                   .dbsym e NTCres _NTCres A[402:201]i
+ 0192           _tempvalue::
+ 0192                   .blkb 2
+                        .area idata
+ 0192 0000              .word 0
+                        .area data(ram, con, rel)
+ 0194                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\config.h
+ 0194                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0194                   .dbsym e tempvalue _tempvalue i
+                        .area text(rom, con, rel)
+ 0000                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0000                   .dbfunc e Delayus _Delayus fV
+ 0000           ;              i -> R20,R21
+ 0000           ;             US -> R10,R11
+                        .even
+ 0000           _Delayus::
+ 0000 00D0              rcall push_xgset300C
+ 0002 5801              movw R10,R16
+ 0004                   .dbline -1
+ 0004                   .dbline 24
+ 0004           ; /*********头文件包含*************/
+ 0004           ; #include <iom48v.h>
+ 0004           ; #include <macros.h>
+ 0004           ; #include <stdio.h>
+ 0004           ; #include "config.h"
+ 0004           ; #include "HWFS.h"
+ 0004           ; #include "suma.h"
+ 0004           ; /***********宏定义*************/
+ 0004           ; #define  uchar unsigned char 
+ 0004           ; #define  uint unsigned int
+ 0004           ; void Delayus(uint US);
+ 0004           ; void port_init(void);
+ 0004           ; void Delay_ms (uint ms);
+ 0004           ; void init_devices(void);
+ 0004           ; uint mega48_ad(void);
+ 0004           ; unsigned int ada,k1,tempvalue=0;
+ 0004           ; /*******************************************
+ 0004           ; 函数名称: Delayus
+ 0004           ; 功    能: 延时指定微秒（8M晶振）
+ 0004           ; 参    数: US--延时的微秒数(大约，不是很精确，MS越大越准确)
+ 0004           ; 返回值  : 无
+ 0004           ; /********************************************/
+ 0004           ; void Delayus(uint US)           
+ 0004           ; {
+ 0004                   .dbline 26
+ 0004           ;  int i;
+ 0004           ;  US=US*5/4;                    //5/4是在8MHz晶振下，通过软件仿真反复实验得到的数值
+ 0004 05E0              ldi R16,5
+ 0006 10E0              ldi R17,0
+ 0008 9501              movw R18,R10
+ 000A 00D0              rcall empy16s
+ 000C 5801              movw R10,R16
+ 000E B694              lsr R11
+ 0010 A794              ror R10
+ 0012 B694              lsr R11
+ 0014 A794              ror R10
+ 0016                   .dbline 27
+ 0016           ;  for( i=0;i<US;i++); 
+ 0016 4427              clr R20
+ 0018 5527              clr R21
+ 001A 02C0              rjmp L5
+ 001C           L2:
+ 001C                   .dbline 27
+ 001C           L3:
+ 001C                   .dbline 27
+ 001C 4F5F              subi R20,255  ; offset = 1
+ 001E 5F4F              sbci R21,255
+ 0020           L5:
+ 0020                   .dbline 27
+ 0020 4A15              cp R20,R10
+ 0022 5B05              cpc R21,R11
+ 0024 D8F3              brlo L2
+ 0026           X0:
+ 0026                   .dbline -2
+ 0026           L1:
+ 0026                   .dbline 0 ; func end
+ 0026 00C0              rjmp pop_xgset300C
+ 0028                   .dbsym r i 20 I
+ 0028                   .dbsym r US 10 i
+ 0028                   .dbend
+ 0028                   .dbfunc e port_init _port_init fV
+                        .even
+ 0028           _port_init::
+ 0028                   .dbline -1
+ 0028                   .dbline 37
+ 0028           ; }
+ 0028           ; 
+ 0028           ; /*******************************************
+ 0028           ; 函数名称: IO口初始化函数
+ 0028           ; 功    能: 实现IO初始化
+ 0028           ; 参    数: 无
+ 0028           ; 返 回 值: 无
+ 0028           ; /********************************************/
+ 0028           ; void port_init(void)
+ 0028           ; {
+ 0028                   .dbline 38
+ 0028           ;  DDRC  = 0x0E;  //PC0作为AD的输入
+ 0028 8EE0              ldi R24,14
+ 002A 87B9              out 0x7,R24
+ 002C                   .dbline 39
+ 002C           ;  PORTC = 0x0E;
+ 002C 88B9              out 0x8,R24
+ 002E                   .dbline 40
+ 002E           ; DDRD  = 0xFF;
+ 002E 8FEF              ldi R24,255
+ 0030 8AB9              out 0xa,R24
+ 0032                   .dbline 41
+ 0032           ;  PORTD = 0x00;
+ 0032 2224              clr R2
+ 0034 2BB8              out 0xb,R2
+ 0036                   .dbline 42
+ 0036           ; DDRB=BIT(0);
+ 0036 81E0              ldi R24,1
+ 0038 84B9              out 0x4,R24
+ 003A                   .dbline 43
+ 003A           ; PORTB&=~BIT(0);
+ 003A 2898              cbi 0x5,0
+ 003C                   .dbline -2
+ 003C           L6:
+ 003C                   .dbline 0 ; func end
+ 003C 0895              ret
+ 003E                   .dbend
+ 003E                   .dbfunc e Delay_ms _Delay_ms fV
+ 003E           ;              i -> R20,R21
+ 003E           ;              j -> R22,R23
+ 003E           ;             ms -> R16,R17
+                        .even
+ 003E           _Delay_ms::
+ 003E 00D0              rcall push_xgsetF000
+ 0040                   .dbline -1
+ 0040                   .dbline 52
+ 0040           ; }
+ 0040           ; /*******************************************
+ 0040           ; 函数名称: 软件延时函数
+ 0040           ; 功    能: 实现软件延时
+ 0040           ; 参    数: ms--延时的毫秒数
+ 0040           ; 返 回 值: 无
+ 0040           ; /********************************************/
+ 0040           ; extern void Delay_ms (uint ms)
+ 0040           ; {
+ 0040                   .dbline 54
+ 0040           ;        unsigned int i,j;
+ 0040           ;        for(i=0;i<ms;i++)
+ 0040 4427              clr R20
+ 0042 5527              clr R21
+ 0044 0BC0              rjmp L11
+ 0046           L8:
+ 0046                   .dbline 55
+ 0046           ;               for(j=0;j<1141;j++);
+ 0046 6627              clr R22
+ 0048 7727              clr R23
+ 004A 02C0              rjmp L15
+ 004C           L12:
+ 004C                   .dbline 55
+ 004C           L13:
+ 004C                   .dbline 55
+ 004C 6F5F              subi R22,255  ; offset = 1
+ 004E 7F4F              sbci R23,255
+ 0050           L15:
+ 0050                   .dbline 55
+ 0050 6537              cpi R22,117
+ 0052 E4E0              ldi R30,4
+ 0054 7E07              cpc R23,R30
+ 0056 D0F3              brlo L12
+ 0058           X1:
+ 0058           L9:
+ 0058                   .dbline 54
+ 0058 4F5F              subi R20,255  ; offset = 1
+ 005A 5F4F              sbci R21,255
+ 005C           L11:
+ 005C                   .dbline 54
+ 005C 4017              cp R20,R16
+ 005E 5107              cpc R21,R17
+ 0060 90F3              brlo L8
+ 0062           X2:
+ 0062                   .dbline -2
+ 0062           L7:
+ 0062                   .dbline 0 ; func end
+ 0062 00C0              rjmp pop_xgsetF000
+ 0064                   .dbsym r i 20 i
+ 0064                   .dbsym r j 22 i
+ 0064                   .dbsym r ms 16 i
+ 0064                   .dbend
+ 0064                   .dbfunc e init_devices _init_devices fV
+                        .even
+ 0064           _init_devices::
+ 0064                   .dbline -1
+ 0064                   .dbline 65
+ 0064           ; }
+ 0064           ; 
+ 0064           ; /*******************************************
+ 0064           ; 函数名称: 设备初始化函数
+ 0064           ; 功    能: 对AVR单片机进行初始化
+ 0064           ; 参    数: 无
+ 0064           ; 返 回 值: 无
+ 0064           ; /********************************************/
+ 0064           ; void init_devices(void)
+ 0064           ; {
+ 0064                   .dbline 67
+ 0064           ;  //stop errant interrupts until set up
+ 0064           ;  CLI(); //disable all interrupts
+ 0064 F894              cli
+ 0066                   .dbline 68
+ 0066           ;  port_init();
+ 0066 E0DF              rcall _port_init
+ 0068                   .dbline 71
+ 0068           ; // timer1_init();
+ 0068           ; 
+ 0068           ;  MCUCR = 0x00;
+ 0068 2224              clr R2
+ 006A 25BE              out 0x35,R2
+ 006C                   .dbline 72
+ 006C           ;  EICRA = 0x00; //extended ext ints
+ 006C 20926900          sts 105,R2
+ 0070                   .dbline 73
+ 0070           ;  EIMSK = 0x00;
+ 0070 2DBA              out 0x1d,R2
+ 0072                   .dbline 75
+ 0072           ;  
+ 0072           ;  TIMSK0 = 0x00; //timer 0 interrupt sources
+ 0072 20926E00          sts 110,R2
+ 0076                   .dbline 76
+ 0076           ;  TIMSK1 = 0x00; //timer 1 interrupt sources
+ 0076 20926F00          sts 111,R2
+ 007A                   .dbline 77
+ 007A           ;  TIMSK2 = 0x00; //timer 2 interrupt sources
+ 007A 20927000          sts 112,R2
+ 007E                   .dbline 79
+ 007E           ;  
+ 007E           ;  PCMSK0 = 0x00; //pin change mask 0 
+ 007E 20926B00          sts 107,R2
+ 0082                   .dbline 80
+ 0082           ;  PCMSK1 = 0x00; //pin change mask 1 
+ 0082 20926C00          sts 108,R2
+ 0086                   .dbline 81
+ 0086           ;  PCMSK2 = 0x00; //pin change mask 2
+ 0086 20926D00          sts 109,R2
+ 008A                   .dbline 82
+ 008A           ;  PCICR = 0x00; //pin change enable 
+ 008A 20926800          sts 104,R2
+ 008E                   .dbline 83
+ 008E           ;  PRR = 0x00; //power controller
+ 008E 20926400          sts 100,R2
+ 0092                   .dbline 84
+ 0092           ;  SEI(); //re-enable interrupts
+ 0092 7894              sei
+ 0094                   .dbline -2
+ 0094           L16:
+ 0094                   .dbline 0 ; func end
+ 0094 0895              ret
+ 0096                   .dbend
+ 0096                   .dbfunc e mega48_ad _mega48_ad fi
+ 0096           ;         addata -> R10,R11
+                        .even
+ 0096           _mega48_ad::
+ 0096 AA92              st -y,R10
+ 0098 BA92              st -y,R11
+ 009A                   .dbline -1
+ 009A                   .dbline 94
+ 009A           ;  //all peripherals are now initialized
+ 009A           ; }
+ 009A           ; /*************************************************************
+ 009A           ; 函数名称: AD采样函数。
+ 009A           ; 功    能: 实现电压的AD采样。
+ 009A           ; 参    数: 无
+ 009A           ; 返 回 值: addata--AD采样的值。1
+ 009A           ; /************************************************************/
+ 009A           ; uint mega48_ad(void)
+ 009A           ; {
+ 009A                   .dbline 96
+ 009A           ;      uint addata;
+ 009A           ;        ADCSRA = 0x00; //disable adc
+ 009A 2224              clr R2
+ 009C 20927A00          sts 122,R2
+ 00A0                   .dbline 98
+ 00A0           ;        //PORTA&=~BIT(PA4);
+ 00A0           ;        ADMUX=0x00;//选择外部参考电压
+ 00A0 20927C00          sts 124,R2
+ 00A4                   .dbline 100
+ 00A4           ;        //ADMUX=0xC4;//选择内部参考电压
+ 00A4           ;        ACSR=0X80;
+ 00A4 80E8              ldi R24,128
+ 00A6 80BF              out 0x30,R24
+ 00A8                   .dbline 102
+ 00A8           ;        //ADCSRB = 0x00;
+ 00A8           ;        ADCSRA = 0xC7;
+ 00A8 87EC              ldi R24,199
+ 00AA 80937A00          sts 122,R24
+ 00AE           L18:
+ 00AE                   .dbline 103
+ 00AE           ;        while(!(ADCSRA&(BIT(ADIF))));
+ 00AE           L19:
+ 00AE                   .dbline 103
+ 00AE 20907A00          lds R2,122
+ 00B2 24FE              sbrs R2,4
+ 00B4 FCCF              rjmp L18
+ 00B6           X3:
+ 00B6                   .dbline 104
+ 00B6           ;      addata=ADCL;
+ 00B6 A0907800          lds R10,120
+ 00BA BB24              clr R11
+ 00BC                   .dbline 105
+ 00BC           ;        addata=addata+ADCH*256;
+ 00BC 20917900          lds R18,121
+ 00C0 3327              clr R19
+ 00C2 00E0              ldi R16,256
+ 00C4 11E0              ldi R17,1
+ 00C6 00D0              rcall empy16s
+ 00C8 A00E              add R10,R16
+ 00CA B11E              adc R11,R17
+ 00CC                   .dbline 107
+ 00CC           ;        //ADCSRA = 0x00;
+ 00CC           ;        return addata;
+ 00CC 8501              movw R16,R10
+ 00CE                   .dbline -2
+ 00CE           L17:
+ 00CE                   .dbline 0 ; func end
+ 00CE B990              ld R11,y+
+ 00D0 A990              ld R10,y+
+ 00D2 0895              ret
+ 00D4                   .dbsym r addata 10 i
+ 00D4                   .dbend
+ 00D4                   .dbfunc e main _main fV
+ 00D4           ;             al -> R22
+ 00D4           ;       temp_low -> R20,R21
+ 00D4           ;    temp_middle -> R14,R15
+ 00D4           ;      temp_high -> R12,R13
+ 00D4           ;      tempvalue -> R10,R11
+ 00D4           ;             k2 -> R22,R23
+                        .even
+ 00D4           _main::
+ 00D4 2397              sbiw R28,3
+ 00D6                   .dbline -1
+ 00D6                   .dbline 117
+ 00D6           ; }   
+ 00D6           ; 
+ 00D6           ; /********************************************
+ 00D6           ; 函数名称: 主函数
+ 00D6           ; 功    能: 实现函数主体功能。
+ 00D6           ; 参    数: 无
+ 00D6           ; 返 回 值: 无
+ 00D6           ; ********************************************/
+ 00D6           ; void main(void)
+ 00D6           ; {
+ 00D6                   .dbline 120
+ 00D6           ;   uint temp_high,temp_middle,temp_low,tempvalue,k2;
+ 00D6           ;   uchar al;
+ 00D6           ;   init_devices();
+ 00D6 C6DF              rcall _init_devices
+ 00D8 54C0              rjmp L23
+ 00DA           L22:
+ 00DA                   .dbline 122
+ 00DA           ;   while(1)
+ 00DA           ;     {
+ 00DA                   .dbline 123
+ 00DA           ;               k1=0;
+ 00DA 2224              clr R2
+ 00DC 3324              clr R3
+ 00DE 30920100          sts _k1+1,R3
+ 00E2 20920000          sts _k1,R2
+ 00E6                   .dbline 124
+ 00E6           ;               k2=0;
+ 00E6 6627              clr R22
+ 00E8 7727              clr R23
+ 00EA                   .dbline 125
+ 00EA           ;               ada=0;
+ 00EA 30920300          sts _ada+1,R3
+ 00EE 20920200          sts _ada,R2
+ 00F2                   .dbline 126
+ 00F2           ;                       ada=mega48_ad();  //读出AD的采样值
+ 00F2 D1DF              rcall _mega48_ad
+ 00F4 10930300          sts _ada+1,R17
+ 00F8 00930200          sts _ada,R16
+ 00FC 19C0              rjmp L26
+ 00FE           L25:
+ 00FE                   .dbline 128
+ 00FE           ;                       while(ada<(NTCres[k2]))
+ 00FE           ;                       {
+ 00FE                   .dbline 129
+ 00FE           ;                               k1=k1+2;
+ 00FE 80910000          lds R24,_k1
+ 0102 90910100          lds R25,_k1+1
+ 0106 0296              adiw R24,2
+ 0108 90930100          sts _k1+1,R25
+ 010C 80930000          sts _k1,R24
+ 0110                   .dbline 130
+ 0110           ;                               k2++;
+ 0110 6F5F              subi R22,255  ; offset = 1
+ 0112 7F4F              sbci R23,255
+ 0114                   .dbline 131
+ 0114           ;                               if(k1>410) break;
+ 0114 8AE9              ldi R24,410
+ 0116 91E0              ldi R25,1
+ 0118 20900000          lds R2,_k1
+ 011C 30900100          lds R3,_k1+1
+ 0120 8215              cp R24,R2
+ 0122 9305              cpc R25,R3
+ 0124 08F4              brsh L28
+ 0126           X4:
+ 0126                   .dbline 131
+ 0126 14C0              rjmp L27
+ 0128           L28:
+ 0128                   .dbline 132
+ 0128           ;                               tempvalue=k1;
+ 0128 A0900000          lds R10,_k1
+ 012C B0900100          lds R11,_k1+1
+ 0130                   .dbline 133
+ 0130           ;                               }
+ 0130           L26:
+ 0130                   .dbline 127
+ 0130 80E0              ldi R24,<_NTCres
+ 0132 90E0              ldi R25,>_NTCres
+ 0134 FB01              movw R30,R22
+ 0136 EE0F              lsl R30
+ 0138 FF1F              rol R31
+ 013A E80F              add R30,R24
+ 013C F91F              adc R31,R25
+ 013E 2080              ldd R2,z+0
+ 0140 3180              ldd R3,z+1
+ 0142 40900200          lds R4,_ada
+ 0146 50900300          lds R5,_ada+1
+ 014A 4214              cp R4,R2
+ 014C 5304              cpc R5,R3
+ 014E B8F2              brlo L25
+ 0150           X5:
+ 0150           L27:
+ 0150                   .dbline 135
+ 0150           ;               
+ 0150           ;               temp_high=tempvalue/100;//十位
+ 0150 24E6              ldi R18,100
+ 0152 30E0              ldi R19,0
+ 0154 8501              movw R16,R10
+ 0156 00D0              rcall div16u
+ 0158 6801              movw R12,R16
+ 015A                   .dbline 136
+ 015A           ;               temp_middle=tempvalue%100/10;//个位
+ 015A 24E6              ldi R18,100
+ 015C 30E0              ldi R19,0
+ 015E 8501              movw R16,R10
+ 0160 00D0              rcall mod16u
+ 0162 2AE0              ldi R18,10
+ 0164 30E0              ldi R19,0
+ 0166 00D0              rcall div16u
+ 0168 7801              movw R14,R16
+ 016A                   .dbline 137
+ 016A           ;               temp_low=tempvalue%10;//小数     x
+ 016A 2AE0              ldi R18,10
+ 016C 30E0              ldi R19,0
+ 016E 8501              movw R16,R10
+ 0170 00D0              rcall mod16u
+ 0172 A801              movw R20,R16
+ 0174                   .dbline 138
+ 0174           ;               al=k2%256;
+ 0174 7070              andi R23,0
+ 0176                   .dbline 139
+ 0176           ;         hongwaifashe(temp_high,temp_middle,temp_low,al);
+ 0176 6A83              std y+2,R22
+ 0178 5983              std y+1,R21
+ 017A 4883              std y+0,R20
+ 017C 9701              movw R18,R14
+ 017E 8601              movw R16,R12
+ 0180 00D0              rcall _hongwaifashe
+ 0182                   .dbline 140
+ 0182           ;       }
+ 0182           L23:
+ 0182                   .dbline 121
+ 0182 ABCF              rjmp L22
+ 0184           X6:
+ 0184                   .dbline -2
+ 0184           L21:
+ 0184                   .dbline 0 ; func end
+ 0184 2396              adiw R28,3
+ 0186 0895              ret
+ 0188                   .dbsym r al 22 c
+ 0188                   .dbsym r temp_low 20 i
+ 0188                   .dbsym r temp_middle 14 i
+ 0188                   .dbsym r temp_high 12 i
+ 0188                   .dbsym r tempvalue 10 i
+ 0188                   .dbsym r k2 22 i
+ 0188                   .dbend
+                        .area bss(ram, con, rel)
+ 0000                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\ir.c
+ 0000           _k1::
+ 0000                   .blkb 2
+ 0002                   .dbsym e k1 _k1 i
+ 0002           _ada::
+ 0002                   .blkb 2
+ 0004                   .dbsym e ada _ada i
+ 0004           ; }
+ 0004           ; 

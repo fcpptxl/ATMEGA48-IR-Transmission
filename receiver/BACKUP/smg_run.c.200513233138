@@ -1,0 +1,107 @@
+/******************************************************
+              忠兴电子元件店编辑
+    器件参数：ATMega48/8/88/168，内部8.0000Mhz		
+	实现功能：数码管动态显示               
+	现象描述：四位数码管显示1234
+	编译环境：ICC-AVR application builder
+	编写日期：08年07月05日
+	使用注意：1、应包含头文件iom48v.h和macros.h
+			  2、忠兴电子元件店ATMEGA48_88_168_ZZX1实验板
+    硬件连接：1、保留主芯片座两边的排针的短路帽
+			  2、其余无关的短路帽拔掉									   			  
+*******************************************************/
+#include <iom48v.h>
+#include <macros.h>
+
+
+/***********宏定义*************/
+#define  uchar unsigned char 
+#define  uint unsigned int
+
+//将数据保存在程序存储器中，单片机数据存储器很小，可以将不变动的数据放在程序存储器中。
+#pragma data:code                            
+flash  table[]={0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f,0x77,0x7c,0x39,0x5e,0x79,0x71};
+#pragma data:data  //设置数据区回到数据存储区
+
+/***************************************************
+宏定义名称：IO端口操作宏定义。
+功      能：实现数码管的位选。
+***************************************************/
+#define SET_WEI1 PORTC|=BIT(1)   
+#define SET_WEI2 PORTC|=~BIT(2)
+#define SET_WEI3 PORTC|=~BIT(4)
+#define SET_WEI4 PORTC|=~BIT(5)
+
+#define CLR_WEI1 PORTC&=~BIT(1)
+#define CLR_WEI2 PORTC&=BIT(2)
+#define CLR_WEI3 PORTC&=BIT(4)
+#define CLR_WEI4 PORTC&=BIT(5)
+#define CLR_ALL  PORTC&=~0XC9
+                          
+
+/*******************************************
+函数名称: IO口初始化程序
+功    能: 实现IO初始化
+参    数: 无
+返 回 值: 无
+/********************************************/
+void port_init(void)
+{
+ PORTC = 0x00;
+ DDRC  = 0x3F;
+ PORTB = 0xFF;
+ DDRB  = 0xFF;
+}
+
+/*******************************************
+函数名称: 软件延时函数
+功    能: 实现软件延时
+参    数: ms--延时的毫秒数
+返 回 值: 无
+/********************************************/
+void Delay_ms(uint ms)
+{
+   unsigned int i,j;
+   for(i=0;i<ms;i++)
+     for(j=0;j<1141;j++);//1141是在8MHz晶振下，通过软件仿真反复实验得到的数值
+}
+
+/*************************************************************
+函数名称: 数码管显示函数。
+功    能: 实现在某位数码管上显示要显示的数值。
+参    数: value--数码管上要显示的值；wei--在哪一位数码管上显示
+返 回 值: 无
+/************************************************************/
+void disp_smg(uchar value,uchar wei)
+{
+  PORTB=value;//给数码管赋值
+  switch(wei)
+    {
+	  case 1:SET_WEI1;break;
+	  case 2:SET_WEI2;break;
+	  case 3:SET_WEI3;break;
+	  case 4:SET_WEI4;break;
+	  default:break;
+	}
+  Delay_ms(2);//延时2ms
+  CLR_ALL;//关显示
+}
+
+/********************************************
+函数名称: 主函数
+功    能: 实现函数主体功能。
+参    数: 无
+返 回 值: 无
+********************************************/
+void main(void)
+{
+  uchar i;
+  port_init();//端口初始化
+  while(1)
+    {
+	 for(i=2;i<5;i++)
+	    disp_smg(table[i],i);
+	}
+  
+}
+

@@ -1,0 +1,359 @@
+                        .module HWFS.c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\HWFS.c
+ 0000                   .dbfunc e hongwaifashe _hongwaifashe fV
+ 0000           ;           temp -> R20
+ 0000           ;              c -> R14,R15
+ 0000           ;              b -> R12,R13
+ 0000           ;              a -> R10,R11
+                        .even
+ 0000           _hongwaifashe::
+ 0000 00D0              rcall push_xgset30FC
+ 0002 6901              movw R12,R18
+ 0004 5801              movw R10,R16
+ 0006 2397              sbiw R28,3
+ 0008 EB84              ldd R14,y+11
+ 000A FC84              ldd R15,y+12
+ 000C 4D85              ldd R20,y+13
+ 000E                   .dbline -1
+ 000E                   .dbline 6
+ 000E           ; #include <iom48v.h>
+ 000E           ; #include <macros.h>
+ 000E           ; #include "HWFS.h"
+ 000E           ; #include "suma.h"
+ 000E           ; void hongwaifashe(uint a,uint b,uint c,uchar temp)
+ 000E           ; { 
+ 000E                   .dbline 8
+ 000E           ;   
+ 000E           ;       BFS;               //发射端常高电压
+ 000E 289A              sbi 0x5,0
+ 0010                   .dbline 8
+ 0010                   .dbline 9
+ 0010           ;   ZZ(a,b,c,temp);
+ 0010 4A83              std y+2,R20
+ 0012 F982              std y+1,R15
+ 0014 E882              std y+0,R14
+ 0016 9601              movw R18,R12
+ 0018 8501              movw R16,R10
+ 001A 02D0              rcall _ZZ
+ 001C                   .dbline -2
+ 001C           L1:
+ 001C                   .dbline 0 ; func end
+ 001C 2396              adiw R28,3
+ 001E 00C0              rjmp pop_xgset30FC
+ 0020                   .dbsym r temp 20 c
+ 0020                   .dbsym r c 14 i
+ 0020                   .dbsym r b 12 i
+ 0020                   .dbsym r a 10 i
+ 0020                   .dbend
+ 0020                   .dbfunc e ZZ _ZZ fV
+ 0020           ;              x -> R20
+ 0020           ;              c -> R14,R15
+ 0020           ;              b -> R12,R13
+ 0020           ;              a -> R10,R11
+                        .even
+ 0020           _ZZ::
+ 0020 00D0              rcall push_xgset30FC
+ 0022 6901              movw R12,R18
+ 0024 5801              movw R10,R16
+ 0026 2397              sbiw R28,3
+ 0028 EB84              ldd R14,y+11
+ 002A FC84              ldd R15,y+12
+ 002C 4D85              ldd R20,y+13
+ 002E                   .dbline -1
+ 002E                   .dbline 14
+ 002E           ; }
+ 002E           ; 
+ 002E           ; 
+ 002E           ;   void ZZ(uint a,uint b,uint c,uchar x)
+ 002E           ; { 
+ 002E                   .dbline 15
+ 002E           ;   TTQ(a,b,c);
+ 002E F982              std y+1,R15
+ 0030 E882              std y+0,R14
+ 0032 9601              movw R18,R12
+ 0034 8501              movw R16,R10
+ 0036 71D0              rcall _TTQ
+ 0038                   .dbline 17
+ 0038           ;   /*命令码+命令反码*/
+ 0038           ;   Z0(a,b,c,x);
+ 0038 4A83              std y+2,R20
+ 003A F982              std y+1,R15
+ 003C E882              std y+0,R14
+ 003E 9601              movw R18,R12
+ 0040 8501              movw R16,R10
+ 0042 0AD0              rcall _Z0
+ 0044                   .dbline 18
+ 0044           ;   Z0(a,b,c,~x);
+ 0044 242E              mov R2,R20
+ 0046 2094              com R2
+ 0048 2A82              std y+2,R2
+ 004A F982              std y+1,R15
+ 004C E882              std y+0,R14
+ 004E 9601              movw R18,R12
+ 0050 8501              movw R16,R10
+ 0052 02D0              rcall _Z0
+ 0054                   .dbline -2
+ 0054           L2:
+ 0054                   .dbline 0 ; func end
+ 0054 2396              adiw R28,3
+ 0056 00C0              rjmp pop_xgset30FC
+ 0058                   .dbsym r x 20 c
+ 0058                   .dbsym r c 14 i
+ 0058                   .dbsym r b 12 i
+ 0058                   .dbsym r a 10 i
+ 0058                   .dbend
+ 0058                   .dbfunc e Z0 _Z0 fV
+ 0058           ;              v -> R20
+ 0058           ;           temp -> R22
+ 0058           ;              c -> R12,R13
+ 0058           ;              b -> R14,R15
+ 0058           ;              a -> R10,R11
+                        .even
+ 0058           _Z0::
+ 0058 00D0              rcall push_xgsetF0FC
+ 005A 7901              movw R14,R18
+ 005C 5801              movw R10,R16
+ 005E 2697              sbiw R28,6
+ 0060 C888              ldd R12,y+16
+ 0062 D988              ldd R13,y+17
+ 0064 6A89              ldd R22,y+18
+ 0066                   .dbline -1
+ 0066                   .dbline 24
+ 0066           ; }
+ 0066           ; /************************************************************
+ 0066           ; 单字节发送程序
+ 0066           ; *************************************************************/
+ 0066           ; void Z0(uint a,uint b,uint c,uchar temp)
+ 0066           ; { 
+ 0066                   .dbline 26
+ 0066           ;   uchar v;
+ 0066           ;   for (v=0;v<8;v++)                     //循环八次数据移位 
+ 0066 4427              clr R20
+ 0068 2BC0              rjmp L7
+ 006A           L4:
+ 006A                   .dbline 27
+ 006A           ;        {     
+ 006A                   .dbline 28
+ 006A           ;                TT0(a,b,c,1,6);
+ 006A 86E0              ldi R24,6
+ 006C 90E0              ldi R25,0
+ 006E 9D83              std y+5,R25
+ 0070 8C83              std y+4,R24
+ 0072 81E0              ldi R24,1
+ 0074 9B83              std y+3,R25
+ 0076 8A83              std y+2,R24
+ 0078 D982              std y+1,R13
+ 007A C882              std y+0,R12
+ 007C 9701              movw R18,R14
+ 007E 8501              movw R16,R10
+ 0080 23D0              rcall _TT0
+ 0082                   .dbline 29
+ 0082           ;                        if(temp&0x01) TT0(a,b,c,0,12); //无脉冲信号12ms
+ 0082 60FF              sbrs R22,0
+ 0084 0EC0              rjmp L8
+ 0086           X0:
+ 0086                   .dbline 29
+ 0086 8CE0              ldi R24,12
+ 0088 90E0              ldi R25,0
+ 008A 9D83              std y+5,R25
+ 008C 8C83              std y+4,R24
+ 008E 2224              clr R2
+ 0090 3324              clr R3
+ 0092 3B82              std y+3,R3
+ 0094 2A82              std y+2,R2
+ 0096 D982              std y+1,R13
+ 0098 C882              std y+0,R12
+ 009A 9701              movw R18,R14
+ 009C 8501              movw R16,R10
+ 009E 14D0              rcall _TT0
+ 00A0 0DC0              rjmp L9
+ 00A2           L8:
+ 00A2                   .dbline 30
+ 00A2           ;                        else          TT0(a,b,c,0,6);  //无脉冲信号6ms   
+ 00A2 86E0              ldi R24,6
+ 00A4 90E0              ldi R25,0
+ 00A6 9D83              std y+5,R25
+ 00A8 8C83              std y+4,R24
+ 00AA 2224              clr R2
+ 00AC 3324              clr R3
+ 00AE 3B82              std y+3,R3
+ 00B0 2A82              std y+2,R2
+ 00B2 D982              std y+1,R13
+ 00B4 C882              std y+0,R12
+ 00B6 9701              movw R18,R14
+ 00B8 8501              movw R16,R10
+ 00BA 06D0              rcall _TT0
+ 00BC           L9:
+ 00BC                   .dbline 31
+ 00BC           ;                        temp >>= 1;                //右移一位
+ 00BC 6695              lsr R22
+ 00BE                   .dbline 32
+ 00BE           ;         }    
+ 00BE           L5:
+ 00BE                   .dbline 26
+ 00BE 4395              inc R20
+ 00C0           L7:
+ 00C0                   .dbline 26
+ 00C0 4830              cpi R20,8
+ 00C2 98F2              brlo L4
+ 00C4           X1:
+ 00C4                   .dbline -2
+ 00C4           L3:
+ 00C4                   .dbline 0 ; func end
+ 00C4 2696              adiw R28,6
+ 00C6 00C0              rjmp pop_xgsetF0FC
+ 00C8                   .dbsym r v 20 c
+ 00C8                   .dbsym r temp 22 c
+ 00C8                   .dbsym r c 12 i
+ 00C8                   .dbsym r b 14 i
+ 00C8                   .dbsym r a 10 i
+ 00C8                   .dbend
+ 00C8                   .dbfunc e TT0 _TT0 fV
+ 00C8           ;              x -> R20,R21
+ 00C8           ;             BT -> R22,R23
+ 00C8           ;              c -> R14,R15
+ 00C8           ;              b -> R12,R13
+ 00C8           ;              a -> R10,R11
+                        .even
+ 00C8           _TT0::
+ 00C8 00D0              rcall push_xgsetF0FC
+ 00CA 6901              movw R12,R18
+ 00CC 5801              movw R10,R16
+ 00CE 2497              sbiw R28,4
+ 00D0 EE84              ldd R14,y+14
+ 00D2 FF84              ldd R15,y+15
+ 00D4 6889              ldd R22,y+16
+ 00D6 7989              ldd R23,y+17
+ 00D8 4A89              ldd R20,y+18
+ 00DA 5B89              ldd R21,y+19
+ 00DC                   .dbline -1
+ 00DC                   .dbline 40
+ 00DC           ; }
+ 00DC           ; 
+ 00DC           ; /************************************************************
+ 00DC           ; 1、38khz脉冲发射+延时程序
+ 00DC           ; 2、（是否发射脉冲：1：发射、0：不发射，延时x（us））
+ 00DC           ; *************************************************************/
+ 00DC           ; void TT0(uint a,uint b,uint c,uint BT,uint x)
+ 00DC           ; {
+ 00DC                   .dbline 41
+ 00DC           ;   if(BT == 0)
+ 00DC 6030              cpi R22,0
+ 00DE 6707              cpc R22,R23
+ 00E0 69F4              brne L11
+ 00E2           X2:
+ 00E2                   .dbline 42
+ 00E2           ;   {           BFS;
+ 00E2                   .dbline 42
+ 00E2 289A              sbi 0x5,0
+ 00E4                   .dbline 42
+ 00E4                   .dbline 43
+ 00E4           ;           delay(a,b,c,x/6);
+ 00E4 26E0              ldi R18,6
+ 00E6 30E0              ldi R19,0
+ 00E8 8A01              movw R16,R20
+ 00EA 00D0              rcall div16u
+ 00EC 1B83              std y+3,R17
+ 00EE 0A83              std y+2,R16
+ 00F0 F982              std y+1,R15
+ 00F2 E882              std y+0,R14
+ 00F4 9601              movw R18,R12
+ 00F6 8501              movw R16,R10
+ 00F8 00D0              rcall _delay
+ 00FA                   .dbline 44
+ 00FA           ;   }   //BT=0时不发送脉冲只延时，BT=1时发送脉冲且延时
+ 00FA 0CC0              rjmp L12
+ 00FC           L11:
+ 00FC                   .dbline 45
+ 00FC           ;   else {         FS;
+ 00FC                   .dbline 45
+ 00FC 2898              cbi 0x5,0
+ 00FE                   .dbline 45
+ 00FE                   .dbline 46
+ 00FE           ;                       delay(a,b,c,x/6); }
+ 00FE 26E0              ldi R18,6
+ 0100 30E0              ldi R19,0
+ 0102 8A01              movw R16,R20
+ 0104 00D0              rcall div16u
+ 0106 1B83              std y+3,R17
+ 0108 0A83              std y+2,R16
+ 010A F982              std y+1,R15
+ 010C E882              std y+0,R14
+ 010E 9601              movw R18,R12
+ 0110 8501              movw R16,R10
+ 0112 00D0              rcall _delay
+ 0114                   .dbline 46
+ 0114           L12:
+ 0114                   .dbline 47
+ 0114           ;   BFS;                                //发射端常常高电压态
+ 0114 289A              sbi 0x5,0
+ 0116                   .dbline 47
+ 0116                   .dbline -2
+ 0116           L10:
+ 0116                   .dbline 0 ; func end
+ 0116 2496              adiw R28,4
+ 0118 00C0              rjmp pop_xgsetF0FC
+ 011A                   .dbsym r x 20 i
+ 011A                   .dbsym r BT 22 i
+ 011A                   .dbsym r c 14 i
+ 011A                   .dbsym r b 12 i
+ 011A                   .dbsym r a 10 i
+ 011A                   .dbend
+ 011A                   .dbfunc e TTQ _TTQ fV
+ 011A           ;              c -> R14,R15
+ 011A           ;              b -> R12,R13
+ 011A           ;              a -> R10,R11
+                        .even
+ 011A           _TTQ::
+ 011A 00D0              rcall push_xgset00FC
+ 011C 6901              movw R12,R18
+ 011E 5801              movw R10,R16
+ 0120 2497              sbiw R28,4
+ 0122 EA84              ldd R14,y+10
+ 0124 FB84              ldd R15,y+11
+ 0126                   .dbline -1
+ 0126                   .dbline 50
+ 0126           ; }
+ 0126           ; void TTQ(uint a,uint b,uint c)
+ 0126           ; {
+ 0126                   .dbline 51
+ 0126           ;   FS;
+ 0126 2898              cbi 0x5,0
+ 0128                   .dbline 51
+ 0128                   .dbline 52
+ 0128           ;   delay(a,b,c,10);
+ 0128 8AE0              ldi R24,10
+ 012A 90E0              ldi R25,0
+ 012C 9B83              std y+3,R25
+ 012E 8A83              std y+2,R24
+ 0130 F982              std y+1,R15
+ 0132 E882              std y+0,R14
+ 0134 9601              movw R18,R12
+ 0136 8501              movw R16,R10
+ 0138 00D0              rcall _delay
+ 013A                   .dbline 53
+ 013A           ;   BFS;
+ 013A 289A              sbi 0x5,0
+ 013C                   .dbline 53
+ 013C                   .dbline 54
+ 013C           ;   delay(a,b,c,2);
+ 013C 82E0              ldi R24,2
+ 013E 90E0              ldi R25,0
+ 0140 9B83              std y+3,R25
+ 0142 8A83              std y+2,R24
+ 0144 F982              std y+1,R15
+ 0146 E882              std y+0,R14
+ 0148 9601              movw R18,R12
+ 014A 8501              movw R16,R10
+ 014C 00D0              rcall _delay
+ 014E                   .dbline -2
+ 014E           L13:
+ 014E                   .dbline 0 ; func end
+ 014E 2496              adiw R28,4
+ 0150 00C0              rjmp pop_xgset00FC
+ 0152                   .dbsym r c 14 i
+ 0152                   .dbsym r b 12 i
+ 0152                   .dbsym r a 10 i
+ 0152                   .dbend
+ 0152           ; }

@@ -1,0 +1,149 @@
+XL
+H 1 areas D global symbols
+M HWFS.c
+S div16u Ref0000
+S push_xgset00FC Ref0000
+S push_xgset30FC Ref0000
+S push_xgsetF0FC Ref0000
+S _delay Ref0000
+S pop_xgset00FC Ref0000
+S pop_xgset30FC Ref0000
+S pop_xgsetF0FC Ref0000
+A text size 152 flags 0
+dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\HWFS.c
+dbfunc e hongwaifashe 0 fV
+dbsym r temp 14 c
+dbsym r c E i
+dbsym r b C i
+dbsym r a A i
+dbline FFFFFFFF E
+dbline 6 E
+dbline 8 E
+dbline 8 10
+dbline 9 10
+dbline FFFFFFFE 1C
+dbline 0 1C
+dbfunc e ZZ 20 fV
+dbsym r x 14 c
+dbsym r c E i
+dbsym r b C i
+dbsym r a A i
+dbline FFFFFFFF 2E
+dbline E 2E
+dbline F 2E
+dbline 11 38
+dbline 12 44
+dbline FFFFFFFE 54
+dbline 0 54
+dbfunc e Z0 58 fV
+dbsym r v 14 c
+dbsym r temp 16 c
+dbsym r c C i
+dbsym r b E i
+dbsym r a A i
+dbline FFFFFFFF 66
+dbline 18 66
+dbline 1A 66
+dbline 1B 6A
+dbline 1C 6A
+dbline 1D 82
+dbline 1D 86
+dbline 1E A2
+dbline 1F BC
+dbline 20 BE
+dbline 1A BE
+dbline 1A C0
+dbline FFFFFFFE C4
+dbline 0 C4
+dbfunc e TT0 C8 fV
+dbsym r x 14 i
+dbsym r BT 16 i
+dbsym r c E i
+dbsym r b C i
+dbsym r a A i
+dbline FFFFFFFF DC
+dbline 28 DC
+dbline 29 DC
+dbline 2A E2
+dbline 2A E2
+dbline 2A E4
+dbline 2B E4
+dbline 2C FA
+dbline 2D FC
+dbline 2D FC
+dbline 2D FE
+dbline 2E FE
+dbline 2E 114
+dbline 2F 114
+dbline 2F 116
+dbline FFFFFFFE 116
+dbline 0 116
+dbfunc e TTQ 11A fV
+dbsym r c E i
+dbsym r b C i
+dbsym r a A i
+dbline FFFFFFFF 126
+dbline 32 126
+dbline 33 126
+dbline 33 128
+dbline 34 128
+dbline 35 13A
+dbline 35 13C
+dbline 36 13C
+dbline FFFFFFFE 14E
+dbline 0 14E
+S _ZZ Def0020
+S _TT0 Def00C8
+S _hongwaifashe Def0000
+S _TTQ Def011A
+S _Z0 Def0058
+T 00 00 00 D0 69 01 58 01 23 97 EB 84 FC 84 4D 85
+R 00 00 00 00 82 02 02 00
+T 0E 00 28 9A 4A 83 F9 82 E8 82 96 01 85 01 02 D0
+R 00 00 00 00
+T 1C 00 23 96 00 C0
+R 00 00 00 00 82 04 06 00
+T 20 00 00 D0 69 01 58 01 23 97 EB 84 FC 84 4D 85
+R 00 00 00 00 82 02 02 00
+T 2E 00 F9 82 E8 82 96 01 85 01 71 D0 4A 83 F9 82
+R 00 00 00 00
+T 3C 00 E8 82 96 01 85 01 0A D0 24 2E 20 94 2A 82
+R 00 00 00 00
+T 4A 00 F9 82 E8 82 96 01 85 01 02 D0 23 96 00 C0
+R 00 00 00 00 82 0E 06 00
+T 58 00 00 D0 79 01 58 01 26 97 C8 88 D9 88 6A 89
+R 00 00 00 00 82 02 03 00
+T 66 00 44 27 2B C0 86 E0 90 E0 9D 83 8C 83 81 E0
+R 00 00 00 00
+T 74 00 9B 83 8A 83 D9 82 C8 82 97 01 85 01 23 D0
+R 00 00 00 00
+T 82 00 60 FF 0E C0 8C E0 90 E0 9D 83 8C 83 22 24
+R 00 00 00 00
+T 90 00 33 24 3B 82 2A 82 D9 82 C8 82 97 01 85 01
+R 00 00 00 00
+T 9E 00 14 D0 0D C0 86 E0 90 E0 9D 83 8C 83 22 24
+R 00 00 00 00
+T AC 00 33 24 3B 82 2A 82 D9 82 C8 82 97 01 85 01
+R 00 00 00 00
+T BA 00 06 D0 66 95 43 95 48 30 98 F2 26 96 00 C0
+R 00 00 00 00 82 0E 07 00
+T C8 00 00 D0 69 01 58 01 24 97 EE 84 FF 84 68 89
+R 00 00 00 00 82 02 03 00
+T D6 00 79 89 4A 89 5B 89 60 30 67 07 69 F4 28 9A
+R 00 00 00 00
+T E4 00 26 E0 30 E0 8A 01 00 D0 1B 83 0A 83 F9 82
+R 00 00 00 00 82 08 00 00
+T F2 00 E8 82 96 01 85 01 00 D0 0C C0 28 98 26 E0
+R 00 00 00 00 82 08 04 00
+T 00 01 30 E0 8A 01 00 D0 1B 83 0A 83 F9 82 E8 82
+R 00 00 00 00 82 06 00 00
+T 0E 01 96 01 85 01 00 D0 28 9A 24 96 00 C0
+R 00 00 00 00 82 06 04 00 82 0C 07 00
+T 1A 01 00 D0 69 01 58 01 24 97 EA 84 FB 84 28 98
+R 00 00 00 00 82 02 01 00
+T 28 01 8A E0 90 E0 9B 83 8A 83 F9 82 E8 82 96 01
+R 00 00 00 00
+T 36 01 85 01 00 D0 28 9A 82 E0 90 E0 9B 83 8A 83
+R 00 00 00 00 82 04 04 00
+T 44 01 F9 82 E8 82 96 01 85 01 00 D0 24 96 00 C0
+R 00 00 00 00 82 0A 04 00 82 0E 05 00

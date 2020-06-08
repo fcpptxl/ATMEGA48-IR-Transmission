@@ -1,0 +1,208 @@
+                        .module suma.c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\suma.c
+                        .area data(ram, con, rel)
+ 0000                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\suma.c
+ 0000           _table::
+ 0000                   .blkb 2
+                        .area idata
+ 0000 3F06              .byte 63,6
+                        .area data(ram, con, rel)
+ 0002                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\suma.c
+ 0002                   .blkb 2
+                        .area idata
+ 0002 5B4F              .byte 91,'O
+                        .area data(ram, con, rel)
+ 0004                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\suma.c
+ 0004                   .blkb 2
+                        .area idata
+ 0004 666D              .byte 'f,'m
+                        .area data(ram, con, rel)
+ 0006                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\suma.c
+ 0006                   .blkb 2
+                        .area idata
+ 0006 7D07              .byte 125,7
+                        .area data(ram, con, rel)
+ 0008                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\suma.c
+ 0008                   .blkb 2
+                        .area idata
+ 0008 7F6F              .byte 127,'o
+                        .area data(ram, con, rel)
+ 000A                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\suma.c
+ 000A                   .dbsym e table _table A[10:10]c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile C:\Users\zteng\OneDrive\文档\电子线路设计\程序\suma.c
+ 0000                   .dbfunc e disp_smg _disp_smg fV
+ 0000           ;            wei -> R10
+ 0000           ;          value -> R12
+                        .even
+ 0000           _disp_smg::
+ 0000 00D0              rcall push_xgset303C
+ 0002 A22E              mov R10,R18
+ 0004 C02E              mov R12,R16
+ 0006                   .dbline -1
+ 0006                   .dbline 12
+ 0006           ; #include <iom48v.h>
+ 0006           ; #include <macros.h>
+ 0006           ; #include "suma.h"
+ 0006           ; extern char table[10]={0x3f,0x06,0x5B,0X4F,0X66,0X6D,0X7D,0X07,0X7F,0X6F};
+ 0006           ; /*************************************************************
+ 0006           ; 函数名称: 数码管显示函数。
+ 0006           ; 功    能: 实现在某位数码管上显示要显示的数值。
+ 0006           ; 参    数: value--数码管上要显示的值；wei--在哪一位数码管上显示
+ 0006           ; 返 回 值: 无
+ 0006           ; /************************************************************/
+ 0006           ; void disp_smg(uchar value,uchar wei)
+ 0006           ; {
+ 0006                   .dbline 13
+ 0006           ;   PORTD=value;//给数码管赋值
+ 0006 CBB8              out 0xb,R12
+ 0008                   .dbline 14
+ 0008           ;   switch(wei)
+ 0008 4A2D              mov R20,R10
+ 000A 5527              clr R21
+ 000C 4130              cpi R20,1
+ 000E E0E0              ldi R30,0
+ 0010 5E07              cpc R21,R30
+ 0012 49F0              breq L5
+ 0014           X0:
+ 0014 4230              cpi R20,2
+ 0016 E0E0              ldi R30,0
+ 0018 5E07              cpc R21,R30
+ 001A 41F0              breq L6
+ 001C           X1:
+ 001C 4330              cpi R20,3
+ 001E E0E0              ldi R30,0
+ 0020 5E07              cpc R21,R30
+ 0022 39F0              breq L7
+ 0024           X2:
+ 0024 08C0              rjmp L3
+ 0026           L5:
+ 0026                   .dbline 16
+ 0026           ;     {
+ 0026           ;         case 1:SET_WEI1;CLR_WEI3;break;
+ 0026 4198              cbi 0x8,1
+ 0028                   .dbline 16
+ 0028 439A              sbi 0x8,3
+ 002A                   .dbline 16
+ 002A 05C0              rjmp L3
+ 002C           L6:
+ 002C                   .dbline 17
+ 002C           ;         case 2:CLR_WEI1;SET_WEI2;break;
+ 002C 419A              sbi 0x8,1
+ 002E                   .dbline 17
+ 002E 4298              cbi 0x8,2
+ 0030                   .dbline 17
+ 0030 02C0              rjmp L3
+ 0032           L7:
+ 0032                   .dbline 18
+ 0032           ;         case 3:CLR_WEI2;SET_WEI3;break;
+ 0032 429A              sbi 0x8,2
+ 0034                   .dbline 18
+ 0034 4398              cbi 0x8,3
+ 0036                   .dbline 18
+ 0036                   .dbline 19
+ 0036           ;         default:break;
+ 0036           L3:
+ 0036                   .dbline 21
+ 0036           ;       }
+ 0036           ;   Delay_ms(2);//延时2ms
+ 0036 02E0              ldi R16,2
+ 0038 10E0              ldi R17,0
+ 003A 00D0              rcall _Delay_ms
+ 003C                   .dbline 22
+ 003C           ;   PORTC|=0X0E;//关显示
+ 003C 88B1              in R24,0x8
+ 003E 8E60              ori R24,14
+ 0040 88B9              out 0x8,R24
+ 0042                   .dbline -2
+ 0042           L1:
+ 0042                   .dbline 0 ; func end
+ 0042 00C0              rjmp pop_xgset303C
+ 0044                   .dbsym r wei 10 c
+ 0044                   .dbsym r value 12 c
+ 0044                   .dbend
+ 0044                   .dbfunc e delay _delay fV
+ 0044           ;              i -> R20,R21
+ 0044           ;              t -> R10,R11
+ 0044           ;              c -> R12,R13
+ 0044           ;              b -> R14,R15
+ 0044           ;              a -> R22,R23
+                        .even
+ 0044           _delay::
+ 0044 00D0              rcall push_xgsetF0FC
+ 0046 7901              movw R14,R18
+ 0048 B801              movw R22,R16
+ 004A CA84              ldd R12,y+10
+ 004C DB84              ldd R13,y+11
+ 004E AC84              ldd R10,y+12
+ 0050 BD84              ldd R11,y+13
+ 0052                   .dbline -1
+ 0052                   .dbline 25
+ 0052           ; }
+ 0052           ; void delay(uint a,uint b,uint c,uint t)
+ 0052           ; {
+ 0052                   .dbline 27
+ 0052           ;      uint i;
+ 0052           ;        for(i=0;i<t;i++)
+ 0052 4427              clr R20
+ 0054 5527              clr R21
+ 0056 1BC0              rjmp L12
+ 0058           L9:
+ 0058                   .dbline 28
+ 0058           ;        {
+ 0058                   .dbline 29
+ 0058           ;        disp_smg(table[a],3);
+ 0058 23E0              ldi R18,3
+ 005A 80E0              ldi R24,<_table
+ 005C 90E0              ldi R25,>_table
+ 005E FB01              movw R30,R22
+ 0060 E80F              add R30,R24
+ 0062 F91F              adc R31,R25
+ 0064 0081              ldd R16,z+0
+ 0066 CCDF              rcall _disp_smg
+ 0068                   .dbline 30
+ 0068           ;        disp_smg(table[b]+0x80,2); 
+ 0068 22E0              ldi R18,2
+ 006A 80E0              ldi R24,<_table
+ 006C 90E0              ldi R25,>_table
+ 006E F701              movw R30,R14
+ 0070 E80F              add R30,R24
+ 0072 F91F              adc R31,R25
+ 0074 0081              ldd R16,z+0
+ 0076 0058              subi R16,128    ; addi 128
+ 0078 C3DF              rcall _disp_smg
+ 007A                   .dbline 31
+ 007A           ;        disp_smg(table[c],1);
+ 007A 21E0              ldi R18,1
+ 007C 80E0              ldi R24,<_table
+ 007E 90E0              ldi R25,>_table
+ 0080 F601              movw R30,R12
+ 0082 E80F              add R30,R24
+ 0084 F91F              adc R31,R25
+ 0086 0081              ldd R16,z+0
+ 0088 BBDF              rcall _disp_smg
+ 008A                   .dbline 32
+ 008A           ;        }
+ 008A           L10:
+ 008A                   .dbline 27
+ 008A 4F5F              subi R20,255  ; offset = 1
+ 008C 5F4F              sbci R21,255
+ 008E           L12:
+ 008E                   .dbline 27
+ 008E 4A15              cp R20,R10
+ 0090 5B05              cpc R21,R11
+ 0092 10F3              brlo L9
+ 0094           X3:
+ 0094                   .dbline -2
+ 0094           L8:
+ 0094                   .dbline 0 ; func end
+ 0094 00C0              rjmp pop_xgsetF0FC
+ 0096                   .dbsym r i 20 i
+ 0096                   .dbsym r t 10 i
+ 0096                   .dbsym r c 12 i
+ 0096                   .dbsym r b 14 i
+ 0096                   .dbsym r a 22 i
+ 0096                   .dbend
+ 0096           ; 
+ 0096           ; }

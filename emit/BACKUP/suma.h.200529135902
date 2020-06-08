@@ -1,0 +1,20 @@
+#ifndef __SUMAGUAN_H__
+#define __SUMAGUAN_H__
+#define uchar unsigned char 
+#define uint  unsigned int
+
+/***************************************************
+宏定义名称：IO端口操作宏定义。
+功      能：实现数码管的位选。
+***************************************************/
+#define SET_WEI1 PORTC&=~BIT(2)   
+#define SET_WEI2 PORTC&=~BIT(4)
+#define SET_WEI3 PORTC&=~BIT(5)
+#define CLR_WEI1 PORTC|=BIT(2)
+#define CLR_WEI2 PORTC|=BIT(4)
+#define CLR_WEI3 PORTC|=BIT(5)
+#define CLR_ALL  PORTC|=0X34
+char table[10]={0x3f,0x06,0x5B,0X4F,0X66,0X6D,0X7D,0X07,0X7F,0X6F};//0-F数码管码值
+void disp_smg(uchar value,uchar wei);
+extern void delay(uint a,uint b,uint c,uint t); 
+#endif

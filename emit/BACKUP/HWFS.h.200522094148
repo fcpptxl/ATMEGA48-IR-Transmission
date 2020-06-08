@@ -1,0 +1,22 @@
+#ifndef __HONGWAIFASHE_H__
+#define __HONGWAIFASHE_H__
+#define uchar unsigned char 
+#define uint  unsigned int 
+extern uchar setdata[2]; 
+extern uchar flag;
+void  ZZ(uchar x);
+void  Z0(uchar temp);
+void  TT0(uint BT,uint x);
+#define SBM   0x80                //
+#define m9    (65536-9000) 	      //9mS
+#define m4_5  (65536-4500) 	      //4.5mS
+#define m1_68  (65536-1690) 	      //1.69mS
+#define m_56  (65536-560) 	      //0.56mS
+#define m40   (65536-40000)       //40mS
+
+
+#define FS	PORTD&=~0X02;
+#define BFS PORTD|=0X02;
+
+extern void hongwaifashe(void);
+#endif
